@@ -20,8 +20,24 @@ code {
 
 body {
   font-family: 'DM Sans', sans-serif;
+  max-width: 600px;
+  min-width: 320px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 input {
   font: inherit;
 }
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    max-width: 600px;
+    min-width: 320px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+  }
+} */

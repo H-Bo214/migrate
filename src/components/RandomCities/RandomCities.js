@@ -1,8 +1,13 @@
+import RandomCity from "../RandomCity/RandomCity"
+
 const RandomCities = () => {
   return (
-    <div>
-      <h1>This is RandomCities Component</h1>
-    </div>
+    <section className="main-container">
+      <main>
+        <h2>Check out these cities</h2>
+        <RandomCity />
+      </main>
+    </section>
   )
 }
 
