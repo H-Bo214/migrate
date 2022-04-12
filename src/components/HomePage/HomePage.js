@@ -1,8 +1,14 @@
+import Header from '../Header/Header'
+import Input from '../Input/Input'
+import RandomCities from '../RandomCities/RandomCities'
 const HomePage = () => {
   return (
-    <main>
-      <h1>This is the HomePage Component</h1>
-    </main>
+
+    <section>
+      <Header />
+      <Input />
+      <RandomCities />
+    </section>
   )
 }
 
