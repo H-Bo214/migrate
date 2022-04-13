@@ -1,6 +1,6 @@
 import seattle from '../../assets/images/seattle-skyline.jpeg'
 
-const RandomCity = () => {
+const RandomCity = ( { city } ) => {
   return (
     <div className='city-img-container'>
       <img 
@@ -8,7 +8,7 @@ const RandomCity = () => {
         alt="city skyline" 
         src={seattle}
       />
-      <h3 className='city-name'>Seattle</h3>
+      <h3 className='city-name'>{city}</h3>
     </div>
   )
 }
