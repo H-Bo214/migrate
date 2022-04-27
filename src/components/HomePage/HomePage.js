@@ -1,13 +1,12 @@
 import Header from '../Header/Header'
 import Input from '../Input/Input'
 import RandomCities from '../RandomCities/RandomCities'
-import { fetchUrbanAreas } from '../../apiCalls'
-import { generateRandomCities } from '../../helpers'
+import { fetchUrbanAreas, fetchImages } from '../../apiCalls'
+import { generateRandomCities, buildCityObject, cleanNames} from '../../helpers'
 import { useState, useEffect } from 'react'
 
 const HomePage = () => {
-  const [cityNames, setCityNames] = useState([])
-  const [citiesUrl, setCitiesUrl] = useState([])
+  const [randomCities, setRandomCities] = useState([])
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -18,9 +17,13 @@ const HomePage = () => {
         const urbanAreasList = urbanAreas._links['ua:items']
         const cityList = generateRandomCities(urbanAreasList)
         const names = cityList.map(city => city.name)
-        const cityUrls = cityList.map(city => city.href)
-        setCityNames(names)
-        setCitiesUrl(cityUrls)
+        const formattedNames = cleanNames(names)
+        const cityUrls = cityList.map(city => city.href + 'images')
+        const cityImages = await fetchImages(cityUrls)
+        const images = cityImages.flatMap(el => el.photos)
+        const results = buildCityObject(formattedNames, images)
+        console.log('results: ', results)
+        setRandomCities(results)
       }
      } catch (error) {
       setError('An error occurred. Please refresh the browser.')
@@ -33,7 +36,7 @@ const HomePage = () => {
     <section>
       <Header />
       <Input />
-      <RandomCities cityNames={cityNames} />
+      <RandomCities  cityList={randomCities}/>
     </section>
   )
 }
