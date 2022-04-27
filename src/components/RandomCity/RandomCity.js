@@ -1,3 +1,6 @@
+import './RandomCity.css'
+
+
 const RandomCity = ( { city, imgSrc } ) => {
   return (
     <div className='city-img-container'>

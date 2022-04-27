@@ -1,5 +1,7 @@
 import RandomCity from "../RandomCity/RandomCity"
 import { formatName} from '../../helpers'
+import './RandomCities.css'
+
 
 const RandomCities = ( { cityList } ) => {
   const allCityNames = cityList.map(city => {
@@ -9,11 +11,11 @@ const RandomCities = ( { cityList } ) => {
       imgSrc={city.image}
     />
   })
-  
+
   return (
     <section className="main-container">
       <main>
-        <h2>Check out these cities</h2>
+        <h2 className="greeting">Check out these cities</h2>
         {allCityNames}
       </main>
     </section>

@@ -1,0 +1,22 @@
+.city-img-container {
+  position: relative;
+  max-width: 85%;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+.city-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  height: 300px;  
+}
+
+.city-name {
+  color: white;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  text-shadow: 10px 2px 15px black;
+}

@@ -4,6 +4,7 @@ import RandomCities from '../RandomCities/RandomCities'
 import { fetchUrbanAreas, fetchImages } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, cleanNames} from '../../helpers'
 import { useState, useEffect } from 'react'
+import './HomePage.css'
 
 const HomePage = () => {
   const [randomCities, setRandomCities] = useState([])
@@ -33,7 +34,7 @@ const HomePage = () => {
   }, [])
 
   return (
-    <section>
+    <section className='main-content'>
       <Header />
       <Input />
       <RandomCities  cityList={randomCities}/>
