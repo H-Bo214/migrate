@@ -27,3 +27,13 @@ export async function fetchFullCityNames(urlsArray) {
   let results = await Promise.all([city1, city2, city3, city4])
   return results
 }
+
+export async function getCityDetails(urlsArray) {
+  let citySlug = fetch(urlsArray[0]).then(res => res.json())
+  let cityScores = fetch(urlsArray[1]).then(res => res.json())
+  let cityGeoNameId = fetch(urlsArray[2]).then(res => res.json())
+  let results = await Promise.all([citySlug, cityScores, cityGeoNameId])
+  // let results = await Promise.all([cityScores, cityGeoNameId])
+
+  return results
+}

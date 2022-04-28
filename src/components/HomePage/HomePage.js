@@ -8,12 +8,13 @@ import './HomePage.css'
 
 const HomePage = () => {
   const [randomCities, setRandomCities] = useState([])
+  
   const [error, setError] = useState('')
 
   useEffect(() => {
    const getUrbanAreas = async () => {
      try {
-       const urbanAreas = await fetchUrbanAreas()
+      const urbanAreas = await fetchUrbanAreas()
       if (urbanAreas) {
         const urbanAreasList = urbanAreas._links['ua:items']
         const cityList = generateRandomCities(urbanAreasList)
@@ -23,7 +24,7 @@ const HomePage = () => {
         const cityImages = await fetchImages(cityImageUrls)
         const images = cityImages.flatMap(el => el.photos)
         const results = buildCityObject(cityNames, images)
-        console.log('results: ', results)
+        // console.log('results: ', results)
         setRandomCities(results)
       }
      } catch (error) {

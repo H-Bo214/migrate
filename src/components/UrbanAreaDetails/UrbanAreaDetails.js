@@ -4,7 +4,7 @@ const UrbanAreaDetails = () => {
   let {name} = useParams()
   return (
     <div>
-      <h2>This is UrbanAreaDetails for  {name}</h2>
+      <h2>This is UrbanAreaDetails for {name}</h2>
     </div>
   )
 }
