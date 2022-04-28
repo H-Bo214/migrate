@@ -1,8 +1,8 @@
 import Header from '../Header/Header'
 import Input from '../Input/Input'
 import RandomCities from '../RandomCities/RandomCities'
-import { fetchUrbanAreas, fetchImages } from '../../apiCalls'
-import { generateRandomCities, buildCityObject, cleanNames} from '../../helpers'
+import { fetchUrbanAreas, fetchImages, fetchFullCityNames } from '../../apiCalls'
+import { generateRandomCities, buildCityObject } from '../../helpers'
 import { useState, useEffect } from 'react'
 import './HomePage.css'
 
@@ -17,12 +17,12 @@ const HomePage = () => {
       if (urbanAreas) {
         const urbanAreasList = urbanAreas._links['ua:items']
         const cityList = generateRandomCities(urbanAreasList)
-        const names = cityList.map(city => city.name)
-        const formattedNames = cleanNames(names)
-        const cityUrls = cityList.map(city => city.href + 'images')
-        const cityImages = await fetchImages(cityUrls)
+        const citySlugUrls = cityList.map(city => city.href)
+        const cityNames = await fetchFullCityNames(citySlugUrls)
+        const cityImageUrls = cityList.map(city => city.href + 'images')
+        const cityImages = await fetchImages(cityImageUrls)
         const images = cityImages.flatMap(el => el.photos)
-        const results = buildCityObject(formattedNames, images)
+        const results = buildCityObject(cityNames, images)
         console.log('results: ', results)
         setRandomCities(results)
       }

@@ -9,24 +9,18 @@ export function generateRandomCities(cityList) {
       }
       return results
     }
-
-export function cleanNames(arr) {
-  const regex = /[,|.|\s]/g
-  return arr.map(str => str.replaceAll(regex, '-'))
-}
-
-export function formatName(str) {
-  const regex = /[-]/g
-  return str.replace(regex, ' ')
-}
-
+    
 export function buildCityObject(cityNames, cityImages) {
-  const result = cityNames.reduce((cityData, name) => {
+  console.log('cityList', cityNames)
+  console.log('cityImages', cityImages)
+  const result = cityNames.reduce((cityData, city) => {
+    console.log('city', city)
     const obj = {}
-    cityImages.forEach(img => {
-      if (img.image.mobile.includes(name.toLowerCase())) {
-        obj.name = name
+      cityImages.forEach(img => {
+      if (img.image.mobile.includes(city.slug)) {
+        obj.name = city.full_name
         obj.image = img.image.mobile
+        obj.ua_id = city.ua_id
       }
     })
     cityData.push(obj)

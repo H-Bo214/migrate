@@ -1,5 +1,4 @@
 import RandomCity from "../RandomCity/RandomCity"
-import { formatName} from '../../helpers'
 import './RandomCities.css'
 
 
@@ -7,7 +6,7 @@ const RandomCities = ( { cityList } ) => {
   const allCityNames = cityList.map(city => {
     return <RandomCity 
       key={cityList.indexOf(city)}
-      city={formatName(city.name)}
+      city={city.name}
       imgSrc={city.image}
     />
   })
