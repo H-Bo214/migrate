@@ -1,0 +1,18 @@
+.main-container {
+  max-width: 600px;
+}
+
+main {
+  background-color: #EEFCFC;
+  border-radius: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+.greeting{
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  padding-top: 1.25rem;
+}

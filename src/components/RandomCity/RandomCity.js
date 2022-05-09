@@ -1,14 +1,14 @@
-import seattle from '../../assets/images/seattle-skyline.jpeg'
-
-const RandomCity = () => {
+import './RandomCity.css'
+const RandomCity = ( { city, imgSrc, handleFetchCityDetails } ) => {
   return (
     <div className='city-img-container'>
       <img 
         className='city-img' 
         alt="city skyline" 
-        src={seattle}
+        src={imgSrc}
+        onClick={() => handleFetchCityDetails(city)}
       />
-      <h3 className='city-name'>Seattle</h3>
+      <h3 className='city-name'>{city}</h3>
     </div>
   )
 }
