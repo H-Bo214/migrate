@@ -40,7 +40,6 @@ export function createObj(arr) {
 }
 
 export function cleanData(cityData, cityImg) {
-  // console.log('cityData', cityData)
   const result = Object.assign({}, ...cityData)
   const finalCityObj = {
     img: cityImg,
@@ -52,6 +51,15 @@ export function cleanData(cityData, cityImg) {
     summary: result.summary,
     rating: result.teleport_city_score
   }
-  console.log('finalCityObj', finalCityObj)
   return finalCityObj
+}
+
+export function makeCityUrlsArr(cityObj) {
+  const result = []
+  for (let key in cityObj) {
+    if (cityObj[key].includes('api.teleport.org')) {
+      result.push(cityObj[key])
+    }
+  }
+  return result
 }
