@@ -8,7 +8,6 @@ import './HomePage.css'
 
 const HomePage = () => {
   const [randomCities, setRandomCities] = useState([])
-  
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -24,7 +23,6 @@ const HomePage = () => {
         const cityImages = await fetchImages(cityImageUrls)
         const images = cityImages.flatMap(el => el.photos)
         const results = buildCityObject(cityNames, images)
-        // console.log('results: ', results)
         setRandomCities(results)
       }
      } catch (error) {
@@ -38,7 +36,9 @@ const HomePage = () => {
     <section className='main-content'>
       <Header />
       <Input />
-      <RandomCities  cityList={randomCities}/>
+      <RandomCities  
+        cityList={randomCities}  
+      />
     </section>
   )
 }

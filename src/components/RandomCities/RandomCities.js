@@ -1,30 +1,16 @@
 import RandomCity from "../RandomCity/RandomCity"
-import { useState } from 'react'
-import './RandomCities.css'
-import { getCityDetails } from '../../apiCalls'
-import { cleanData } from '../../helpers'
-
+import { cleanData, makeCityUrlsArr } from '../../helpers'
+import { useNavigate } from 'react-router-dom'
+import {  getCityDetails } from '../../apiCalls'
 const RandomCities = ( { cityList } ) => {
-  const [cityDetails, setCityDetails] = useState({})
-
-  // console.log('cityList', cityList)
-
-  const makeCityUrlsArr = (cityObj) => {
-    const result = []
-    for (let key in cityObj) {
-      if (cityObj[key].includes('api.teleport.org')) {
-        result.push(cityObj[key])
-      }
-    }
-    return result
-  }
+  const navigate = useNavigate()
   
   const handleFetchCityDetails = async (cityName) => {
     const cityToGet = cityList.find(city => city.name === cityName)
     const urlArray = makeCityUrlsArr(cityToGet)
     const fetchedCityDetails = await getCityDetails(urlArray)
-    const data = cleanData(fetchedCityDetails, cityToGet.image)
-    console.log('data', data)
+    const cityData = cleanData(fetchedCityDetails, cityToGet.image)
+    navigate(`/urbanAreaDetails/${cityToGet.name}`, {state: cityData})
   }
 
   const allCityNames = cityList.map(city => {
@@ -32,7 +18,7 @@ const RandomCities = ( { cityList } ) => {
       key={city.ua_id}
       city={city.name}
       imgSrc={city.image}
-      cityDetails={handleFetchCityDetails}
+      handleFetchCityDetails={handleFetchCityDetails}
     />
   })
 
