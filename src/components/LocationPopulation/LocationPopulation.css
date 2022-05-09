@@ -1,0 +1,11 @@
+.location-population-container {
+  display: flex;
+}
+
+.location-container {
+  border: 2px solid purple;
+}
+
+.population-container {
+  border: 2px solid orange;
+}

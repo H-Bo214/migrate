@@ -1,0 +1,29 @@
+.category-container {
+  border: 2px solid magenta;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  border: 2px solid lime;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .category img {
+  width: 100%;
+} */
+
+.category-score {
+  border: 2px solid cornflowerblue;
+  display: flex;
+}
+
+.fill-bar {
+  background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 15px 0;
+	height: 6px;
+	width: 96px;
+}

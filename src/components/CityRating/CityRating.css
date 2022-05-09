@@ -1,0 +1,17 @@
+.city-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city-name-container{
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-icon {
+  width: 1rem;
+}

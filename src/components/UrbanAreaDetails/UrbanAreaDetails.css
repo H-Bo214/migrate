@@ -1,0 +1,11 @@
+.urban-area-img-container {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+
+.urban-area-img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;  
+}
