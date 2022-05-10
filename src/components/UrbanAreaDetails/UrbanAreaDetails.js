@@ -23,7 +23,7 @@ const UrbanAreaDetails = () => {
   } = state
 
   return (
-    <main>
+    <main className="main-content">
       <section className='urban-area-img-container'>
         <img 
           src={img} 

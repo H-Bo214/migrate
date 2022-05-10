@@ -1,3 +1,5 @@
 .main-content {
-  overflow: hidden;
+  height: 80rem;
+  width: 24rem;
+  border: 1px solid red;
 }

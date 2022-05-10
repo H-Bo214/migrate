@@ -1,8 +1,10 @@
+import './Summary.css'
+
 const Summary = ( { summary } ) => {
   const parsedSummary = summary.replace(/<[^>]+>/g, '')
   return (
     <section className="summary-container">
-      <p>{parsedSummary}</p>
+      <p className='summary'>{parsedSummary}</p>
     </section>
   )
 }

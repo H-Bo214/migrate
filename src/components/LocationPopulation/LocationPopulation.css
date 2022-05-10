@@ -1,11 +1,74 @@
 .location-population-container {
   display: flex;
+  margin-top: 2.4rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.location-population-container::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: rgba(110, 111, 112, 0.25);
+  top: 0px;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.location-population-container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: rgba(110, 111, 112, 0.25);
+  bottom: 3px;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .location-container {
-  border: 2px solid purple;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.location-container::after {
+  content: "";
+  position: absolute;
+  height: 85px;
+  background: rgba(110, 111, 112, 0.25);
+  width: 1px;
+  right: 0px;
+  transform: translateX(100%);
+  top: 0;
 }
 
 .population-container {
-  border: 2px solid orange;
+  width: 50%;
+  text-align: center;
 }
+
+.demo-heading {
+  font-size: 1rem;
+  margin: 0 0 .25rem 0;
+}
+
+.latitude, .longitude, .population {
+  margin: 0;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+
+/* .longitude {
+  margin: 0;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+}
+
+.population {
+  margin: 0;
+  line-height: 23px;
+  letter-spacing: 0.2px;
+} */

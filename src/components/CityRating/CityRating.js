@@ -5,7 +5,7 @@ const CityRating = ( { cityName, rating } ) => {
   return (
     <section className='city-rating-container'>
       <div className='city-name-container'>
-        <h1>{cityName}</h1>
+        <h1 className='city'>{cityName}</h1>
       </div>
       <div className='rating-container'>
         <img 
@@ -13,7 +13,7 @@ const CityRating = ( { cityName, rating } ) => {
           alt='Blue star icon'
           className='star-icon'
         />
-        <p>{Math.round(rating)} / 100</p>
+        <p className='overall-score'>{Math.round(rating)} / 100</p>
       </div>
     </section>
   )

@@ -3,6 +3,7 @@ import house from '../../assets/images/house.svg'
 import document from '../../assets/images/document.svg'
 import hand from '../../assets/images/hand.svg'
 import leaf from '../../assets/images/leaf.svg'
+import './Categories.css'
 
 const Categories = ( { scores } ) => {
   console.log('scores IN CAT', scores['Cost of Living'])
@@ -12,7 +13,7 @@ const Categories = ( { scores } ) => {
   const environmentalQuality = scores['Environmental Quality']
 
   return (
-    <section>
+    <section className="all-categories-container">
       <Category 
         categoryName='Cost of living' 
         categoryScore={costOfLiving}

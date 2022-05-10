@@ -1,0 +1,17 @@
+.all-categories-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: .5rem;
+  position: relative;
+}
+
+.all-categories-container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: rgba(110, 111, 112, 0.25);
+  bottom: -4px;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
