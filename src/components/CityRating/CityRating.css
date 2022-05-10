@@ -1,0 +1,26 @@
+.city-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city-name-container{
+}
+
+.city {
+  margin-left: 1.6rem;
+  font-weight: 700;
+}
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-icon {
+  width: 1rem;
+  margin-right: .125rem;
+}
+
+.overall-score {
+  margin-right: 1.5rem;
+}

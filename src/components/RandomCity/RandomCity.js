@@ -4,7 +4,7 @@ const RandomCity = ( { city, imgSrc, handleFetchCityDetails } ) => {
     <div className='city-img-container'>
       <img 
         className='city-img' 
-        alt="city skyline" 
+        alt={`${city} skyline`}
         src={imgSrc}
         onClick={() => handleFetchCityDetails(city)}
       />

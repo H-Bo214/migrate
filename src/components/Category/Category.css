@@ -1,0 +1,35 @@
+.category-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-name {
+  margin-left: .6rem;
+  font-size: .9rem;
+}
+
+.category-score {
+  display: flex;
+  align-items: center;
+}
+
+
+.fill-bar {
+  background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 15px 0;
+	height: 6px;
+	width: 96px;
+}
+
+.score {
+  margin-left: .5rem;
+  font-size: .9rem;
+}
