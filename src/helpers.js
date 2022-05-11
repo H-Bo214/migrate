@@ -33,8 +33,6 @@ export function createObj(arr) {
   console.log('obj in createObj', arr)
   return arr.reduce((scoresObj, category) => {
     scoresObj[category.name] = category.score_out_of_10
-    // console.log('category', category)
-    // console.log('scoresObj', scoresObj)
     return scoresObj
   }, {})
 }

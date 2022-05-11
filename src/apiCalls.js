@@ -1,4 +1,4 @@
-export function fetchUrbanAreas() {
+export async function fetchUrbanAreas() {
   const urbanAreasAPI = 'https://api.teleport.org/api/continents/geonames%3ANA/urban_areas/'
   return fetch(urbanAreasAPI)
   .then(res => {
