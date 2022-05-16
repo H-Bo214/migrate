@@ -3,12 +3,12 @@ function generateRandomIndex(arr) {
 }
 
 export function generateRandomCities(cityList) {
-      const results = []
-      while (results.length < 4) {
-        results.push(cityList[generateRandomIndex(cityList)])
-      }
-      return results
-    }
+  const results = []
+  while (results.length < 4) {
+    results.push(cityList[generateRandomIndex(cityList)])
+  }
+  return results
+}
 
 export function buildCityObject(cityNames, cityImages) {
   const result = cityNames.reduce((cityData, city) => {
@@ -30,7 +30,6 @@ export function buildCityObject(cityNames, cityImages) {
 }
 
 export function createObj(arr) {
-  console.log('obj in createObj', arr)
   return arr.reduce((scoresObj, category) => {
     scoresObj[category.name] = category.score_out_of_10
     return scoresObj
@@ -59,5 +58,14 @@ export function makeCityUrlsArr(cityObj) {
       result.push(cityObj[key])
     }
   }
+  return result
+}
+
+export function createOptions(arr) {
+  const regex = /[\W_]+/g
+  const result = arr.map(city => {
+  const formattedName = city.name.toLowerCase().replace(regex, '-')
+    return {value: formattedName, label: city.name}
+  })
   return result
 }
