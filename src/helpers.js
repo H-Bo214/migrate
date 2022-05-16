@@ -5,7 +5,11 @@ function generateRandomIndex(arr) {
 export function generateRandomCities(cityList) {
   const results = []
   while (results.length < 4) {
-    results.push(cityList[generateRandomIndex(cityList)])
+    if (results.includes(cityList.name)) {
+      results.splice(results.indexOf(cityList.name), 1)
+    } else {
+      results.push(cityList[generateRandomIndex(cityList)])
+    }
   }
   return results
 }
@@ -64,8 +68,26 @@ export function makeCityUrlsArr(cityObj) {
 export function createOptions(arr) {
   const regex = /[\W_]+/g
   const result = arr.map(city => {
-  const formattedName = city.name.toLowerCase().replace(regex, '-')
+    let formattedName = city.name.toLowerCase().replace(regex, '-')
+    if (city.name === 'Washington, D.C.') {
+      formattedName = 'washington-dc'
+    }
     return {value: formattedName, label: city.name}
   })
   return result
+}
+
+export function createSingleCityObj(arr) {
+  const result = Object.assign({}, ...arr)
+  const finalCityObj = {
+    img: result.photos[0].image.mobile,
+    name: result.name,
+    scores: createObj(result.categories),
+    latitude: result.location.latlon.latitude,
+    longitude: result.location.latlon.longitude,
+    population: result.population,
+    summary: result.summary,
+    rating: result.teleport_city_score
+  }
+  return finalCityObj
 }
