@@ -1,5 +1,20 @@
 .main-content {
-  height: 80rem;
-  width: 24rem;
-  border: 1px solid red;
+  
+}
+
+.select-search-container {
+  display: flex;
+}
+
+.select-menu {
+  width: 100%; 
+}
+
+.search-icon {
+cursor: pointer;
+}
+
+.search-button {
+  border: none;
+  background-color: #fff;
 }
