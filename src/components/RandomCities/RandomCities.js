@@ -10,7 +10,6 @@ const RandomCities = ( { cityList } ) => {
     const cityToGet = cityList.find(city => city.name === cityName)
     const urlArray = makeCityUrlsArr(cityToGet)
     const fetchedCityDetails = await fetchBatchData(urlArray)
-    console.log('fetchCityDetails', fetchedCityDetails)
     const cityData = cleanData(fetchedCityDetails, cityToGet.image)
     navigate(`/urbanAreaDetails/${cityToGet.name}`, {state: cityData})
   }

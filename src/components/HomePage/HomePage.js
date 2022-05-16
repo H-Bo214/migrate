@@ -4,12 +4,14 @@ import HashLoader from 'react-spinners/HashLoader'
 import Select from 'react-select'
 import { css } from '@emotion/react'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
-import { generateRandomCities, buildCityObject, createOptions } from '../../helpers'
+import { generateRandomCities, buildCityObject, createOptions, createSingleCityObj } from '../../helpers'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import magnifyingGlass from '../../assets/images/magnifying-glass.svg'
 import './HomePage.css'
 
 const HomePage = () => {
+  const navigate = useNavigate()
   const [randomCities, setRandomCities] = useState([])
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
@@ -60,9 +62,9 @@ const handleSearch = async (e) => {
   const imagesEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/images`
   const dataEndPoints = [slugEndPoint, scoresEndPoint, geoNameIdEndPoint, imagesEndPoint]
   const cityData = await fetchBatchData(dataEndPoints)
-  console.log('cityData in handleSearch', cityData)
+  const parsedCityData = createSingleCityObj(cityData)
+  navigate(`/urbanAreaDetails/${parsedCityData.name}`, {state: parsedCityData})
 }
-
   return (
     <section className='main-content'>
       {error && <h1>{error}</h1>}
