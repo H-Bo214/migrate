@@ -6,11 +6,12 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 30rem;
   margin: 0 auto;
+  min-width: 20rem;
 }
 
 input {

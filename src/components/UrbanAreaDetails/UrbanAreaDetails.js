@@ -10,7 +10,7 @@ const UrbanAreaDetails = () => {
   let {cityName} = useParams()
   let location = useLocation()
   let { state } = location
-  console.log('state', state)
+  // console.log('state', state)
   const { 
     img, 
     name, 
@@ -23,7 +23,7 @@ const UrbanAreaDetails = () => {
   } = state
 
   return (
-    <main className="main-content">
+    <main className="main-content-urban-areas">
       <section className='urban-area-img-container'>
         <img 
           src={img} 

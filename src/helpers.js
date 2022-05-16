@@ -3,12 +3,16 @@ function generateRandomIndex(arr) {
 }
 
 export function generateRandomCities(cityList) {
-      const results = []
-      while (results.length < 4) {
-        results.push(cityList[generateRandomIndex(cityList)])
-      }
-      return results
+  const results = []
+  while (results.length < 4) {
+    if (results.includes(cityList.name)) {
+      results.splice(results.indexOf(cityList.name), 1)
+    } else {
+      results.push(cityList[generateRandomIndex(cityList)])
     }
+  }
+  return results
+}
 
 export function buildCityObject(cityNames, cityImages) {
   const result = cityNames.reduce((cityData, city) => {
@@ -30,11 +34,8 @@ export function buildCityObject(cityNames, cityImages) {
 }
 
 export function createObj(arr) {
-  console.log('obj in createObj', arr)
   return arr.reduce((scoresObj, category) => {
     scoresObj[category.name] = category.score_out_of_10
-    // console.log('category', category)
-    // console.log('scoresObj', scoresObj)
     return scoresObj
   }, {})
 }
@@ -62,4 +63,31 @@ export function makeCityUrlsArr(cityObj) {
     }
   }
   return result
+}
+
+export function createOptions(arr) {
+  const regex = /[\W_]+/g
+  const result = arr.map(city => {
+    let formattedName = city.name.toLowerCase().replace(regex, '-')
+    if (city.name === 'Washington, D.C.') {
+      formattedName = 'washington-dc'
+    }
+    return {value: formattedName, label: city.name}
+  })
+  return result
+}
+
+export function createSingleCityObj(arr) {
+  const result = Object.assign({}, ...arr)
+  const finalCityObj = {
+    img: result.photos[0].image.mobile,
+    name: result.name,
+    scores: createObj(result.categories),
+    latitude: result.location.latlon.latitude,
+    longitude: result.location.latlon.longitude,
+    population: result.population,
+    summary: result.summary,
+    rating: result.teleport_city_score
+  }
+  return finalCityObj
 }

@@ -6,7 +6,7 @@ import leaf from '../../assets/images/leaf.svg'
 import './Categories.css'
 
 const Categories = ( { scores } ) => {
-  console.log('scores IN CAT', scores['Cost of Living'])
+  // console.log('scores IN CAT', scores['Cost of Living'])
   const costOfLiving = scores['Cost of Living']
   const taxation = scores['Taxation']
   const healthcare = scores['Healthcare']

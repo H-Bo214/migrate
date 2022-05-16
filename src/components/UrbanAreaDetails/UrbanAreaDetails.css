@@ -1,10 +1,21 @@
+.main-content-urban-areas {
+  margin: 0 auto;
+}
+
+
 .urban-area-img-container {
   position: relative;
   margin: 0 auto;
 }
 
 .urban-area-img {
+  /* width: 100%; */
+  /* max-width: 100%;
+  object-fit: cover; */
+  /* height: 17rem;   */
+
   width: 100%;
   object-fit: cover;
-  height: 17rem;  
+  object-position: center;
+  height: 30vh;
 }

@@ -2,10 +2,9 @@
   max-width: 600px;
 }
 
-main {
+.main-content-random-cities {
   background-color: #EEFCFC;
   border-radius: 15px;
-  width: 90%;
   margin: 0 auto;
 }
 .greeting{
