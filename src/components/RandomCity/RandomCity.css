@@ -8,8 +8,9 @@
 .city-img {
   width: 100%;
   object-fit: cover;
+  object-position: top;
   border-radius: 10px;
-  height: 300px;  
+  max-height: 12rem;  
 }
 
 .city-name {
@@ -17,6 +18,7 @@
   position: absolute;
   top: 80%;
   width: 100%;
+  margin: 0;
   text-align: center;
   text-shadow: 10px 2px 15px black;
 }

@@ -1,11 +1,12 @@
 .main-container {
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 .main-content-random-cities {
   background-color: #EEFCFC;
   border-radius: 15px;
   margin: 0 auto;
+  min-width: 20rem;
 }
 .greeting{
   text-align: center;

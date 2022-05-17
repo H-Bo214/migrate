@@ -1,11 +1,13 @@
 function generateRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length)
 }
-
+/// Currently not filtering out duplicates///
 export function generateRandomCities(cityList) {
   const results = []
   while (results.length < 4) {
     if (results.includes(cityList.name)) {
+      console.log('hello')
+      console.log('city Name', cityList.name)
       results.splice(results.indexOf(cityList.name), 1)
     } else {
       results.push(cityList[generateRandomIndex(cityList)])

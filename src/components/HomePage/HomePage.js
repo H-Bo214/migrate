@@ -19,10 +19,10 @@ const HomePage = () => {
   const [urbanAreaList, setUrbanAreaList] = useState([])
   
   const spinnerStyle = css`
-    margin-left: 12rem;
-    padding-bottom: 20rem;
-  `
-
+  display: flex;
+  margin: 3rem auto 0 auto;
+ 
+`
   useEffect(() => {
    const getUrbanAreas = async () => {
      try {
