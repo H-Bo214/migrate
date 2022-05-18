@@ -3,7 +3,7 @@ import RandomCities from '../RandomCities/RandomCities'
 import HashLoader from 'react-spinners/HashLoader'
 import Select from 'react-select'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
-import { generateRandomCities, buildCityObject, createOptions, createSingleCityObj } from '../../helpers'
+import { generateRandomCities, buildCityObject, createDropDownOptions, cleanData } from '../../helpers'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import magnifyingGlass from '../../assets/images/magnifying-glass.svg'
@@ -24,8 +24,8 @@ const HomePage = () => {
       const urbanAreas = await fetchUrbanAreas()
       if (urbanAreas) {
         const urbanAreasList = urbanAreas._links['ua:items']
-        const citiesList = createOptions(urbanAreasList)
-        const randomCitiesList = generateRandomCities(urbanAreasList)
+        const citiesList = createDropDownOptions(urbanAreasList)
+        const randomCitiesList = generateRandomCities(4, urbanAreasList)
         const citySlugUrls = randomCitiesList.map(city => city.href)
         const cityNames = await fetchBatchData(citySlugUrls)
         const cityImageUrls = randomCitiesList.map(city => city.href + 'images')
@@ -49,21 +49,28 @@ const HomePage = () => {
   }
 
   const handleSearch = async (e) => {
+    const teleportRootEndpoint = 'https://api.teleport.org/api/urban_areas/slug:'
     e.preventDefault()
-    console.log('e', e)
     if (selectedOption === null) {
-      setError('Please select a city')
+      setError('Select or search a city')
       return
     }
-    const slugEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/`
+    setIsLoading(true)
+    const slugEndPoint = `${teleportRootEndpoint}${selectedOption}/`
+    const scoresEndPoint = `${teleportRootEndpoint}${selectedOption}/scores`
+    const imagesEndPoint = `${teleportRootEndpoint}${selectedOption}/images`
     const slugData = await getGeoNameId(slugEndPoint)
     const geoNameIdEndPoint = slugData._links['ua:identifying-city'].href
-    const scoresEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/scores`
-    const imagesEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/images`
-    const dataEndPoints = [slugEndPoint, scoresEndPoint, geoNameIdEndPoint, imagesEndPoint]
+    const dataEndPoints = [
+      slugEndPoint, 
+      scoresEndPoint, 
+      geoNameIdEndPoint, 
+      imagesEndPoint
+    ]
     const cityData = await fetchBatchData(dataEndPoints)
-    const parsedCityData = createSingleCityObj(cityData)
-    navigate(`/urbanAreaDetails/${parsedCityData.name}`, {state: parsedCityData})
+    const formattedData = cleanData(cityData)
+
+    navigate(`/urbanAreaDetails/${formattedData.name}`, {state: formattedData})
   }
 
   return (
@@ -99,7 +106,8 @@ const HomePage = () => {
         size={100} 
         css={spinnerStyle}/>  :
       <RandomCities  
-        cityList={randomCities}  
+        cityList={randomCities}
+        setIsLoading={setIsLoading}  
       />
       }
     </section>

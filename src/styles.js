@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 
-
 export const customStyles = {
   option: (provided) => ({
     ...provided,
@@ -24,7 +23,7 @@ export const customStyles = {
   }
 }
 
-export   const customTheme = (theme) => {
+export const customTheme = (theme) => {
   return {
     ...theme,
     borderRadius: '20px',
