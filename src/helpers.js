@@ -1,95 +1,91 @@
-function generateRandomIndex(arr) {
-  return Math.floor(Math.random() * arr.length)
-}
-/// Currently not filtering out duplicates///
-export function generateRandomCities(cityList) {
-  const results = []
-  while (results.length < 4) {
-    if (results.includes(cityList.name)) {
-      console.log('hello')
-      console.log('city Name', cityList.name)
-      results.splice(results.indexOf(cityList.name), 1)
-    } else {
-      results.push(cityList[generateRandomIndex(cityList)])
+// Generates a array of random cities
+export const generateRandomCities = (count, arr) => {
+  let answer = []
+  let counter = 0
+  while (counter < count) {
+    let rand = arr[Math.floor(Math.random() * arr.length)]
+    if (answer.some((an) => an === rand) === false) {
+      answer.push(rand)
+      counter++
     }
   }
-  return results
+  return answer
 }
 
-export function buildCityObject(cityNames, cityImages) {
-  const result = cityNames.reduce((cityData, city) => {
+// Creates an object containing the necessary demographic data to display in the UI
+export const buildCityObject = (cities, cityImages) => {
+  const result = cities.reduce((citiesData, city) => {
     const obj = {}
-      cityImages.forEach(img => {
+    cityImages.forEach((img) => {
       if (img.image.mobile.includes(city.slug)) {
         obj.name = city.full_name
         obj.image = img.image.mobile
         obj.ua_id = city.ua_id
         obj.slug = `https://api.teleport.org/api/urban_areas/slug:${city.slug}/`
         obj.scores = `https://api.teleport.org/api/urban_areas/slug:${city.slug}/scores`
-        obj.geoNameId = city._links['ua:identifying-city'].href
+        obj.geoNameId = city._links["ua:identifying-city"].href
       }
     })
-    cityData.push(obj)
-    return cityData
+    citiesData.push(obj)
+    return citiesData
   }, [])
   return result
 }
 
-export function createObj(arr) {
-  return arr.reduce((scoresObj, category) => {
-    scoresObj[category.name] = category.score_out_of_10
-    return scoresObj
-  }, {})
-}
-
-export function cleanData(cityData, cityImg) {
-  const result = Object.assign({}, ...cityData)
-  const finalCityObj = {
-    img: cityImg,
-    name: result.name,
-    scores: createObj(result.categories),
-    latitude: result.location.latlon.latitude,
-    longitude: result.location.latlon.longitude,
-    population: result.population,
-    summary: result.summary,
-    rating: result.teleport_city_score
-  }
-  return finalCityObj
-}
-
-export function makeCityUrlsArr(cityObj) {
+// Creates an array of endpoints
+export const makeCityEndPointsArr = (cityObj) => {
   const result = []
   for (let key in cityObj) {
-    if (cityObj[key].includes('api.teleport.org')) {
+    if (cityObj[key].includes("api.teleport.org")) {
       result.push(cityObj[key])
     }
   }
   return result
 }
 
-export function createOptions(arr) {
+// Creates dropdown options for the Select menu
+export const createDropDownOptions = (cityList) =>  {
   const regex = /[\W_]+/g
-  const result = arr.map(city => {
-    let formattedName = city.name.toLowerCase().replace(regex, '-')
-    if (city.name === 'Washington, D.C.') {
-      formattedName = 'washington-dc'
+  return cityList.map((city) => {
+    let formattedCityName = city.name.toLowerCase().replace(regex, "-")
+    if (city.name === "Washington, D.C.") {
+      formattedCityName = "washington-dc"
     }
-    return {value: formattedName, label: city.name}
+    return {
+      value: formattedCityName,
+      label: city.name,
+    }
   })
-  return result
 }
 
-export function createSingleCityObj(arr) {
-  const result = Object.assign({}, ...arr)
-  const finalCityObj = {
-    img: result.photos[0].image.mobile,
-    name: result.name,
-    scores: createObj(result.categories),
-    latitude: result.location.latlon.latitude,
-    longitude: result.location.latlon.longitude,
-    population: result.population,
-    summary: result.summary,
-    rating: result.teleport_city_score
+// Creates an object with city statistics
+export const createCityStatistics = (cityStats) => {
+  const statistics = cityStats.reduce((stat, category) => {
+    stat[category.name] = category.score_out_of_10
+    return stat
+  }, {})
+  return statistics
+}
+
+// Formats the city data into a single object
+export const cleanData = (cityData, cityImg = null) => {
+  const result = Object.assign({}, ...cityData)
+  const latitude = result.location.latlon.latitude
+  const longitude = result.location.latlon.longitude
+  const name = result.name
+  const population = result.population
+  const summary = result.summary
+  const rating = result.teleport_city_score
+
+  const cityInfo = {
+    img: cityImg || result.photos[0].image.mobile,
+    name,
+    scores: createCityStatistics(result.categories),
+    latitude,
+    longitude,
+    population: population.toLocaleString("en-US"),
+    summary,
+    rating,
   }
-  return finalCityObj
+  return cityInfo
 }
