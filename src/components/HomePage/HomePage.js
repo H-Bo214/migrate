@@ -2,13 +2,13 @@ import Header from '../Header/Header'
 import RandomCities from '../RandomCities/RandomCities'
 import HashLoader from 'react-spinners/HashLoader'
 import Select from 'react-select'
-import { css } from '@emotion/react'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, createOptions, createSingleCityObj } from '../../helpers'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import magnifyingGlass from '../../assets/images/magnifying-glass.svg'
 import './HomePage.css'
+import { customStyles, spinnerStyle, customTheme } from '../../styles.js'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -18,11 +18,6 @@ const HomePage = () => {
   const [selectedOption, setSelectedOption] = useState(null)
   const [urbanAreaList, setUrbanAreaList] = useState([])
   
-  const spinnerStyle = css`
-  display: flex;
-  margin: 3rem auto 0 auto;
- 
-`
   useEffect(() => {
    const getUrbanAreas = async () => {
      try {
@@ -48,29 +43,34 @@ const HomePage = () => {
    getUrbanAreas()
   }, [])
 
-const handleSelectedOption = (e) => {
-  const { value } = e
-  setSelectedOption(value)
-}
+  const handleSelectedOption = (e) => {
+    const { value } = e
+    setSelectedOption(value)
+  }
 
-const handleSearch = async (e) => {
-  e.preventDefault()
-  const slugEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/`
-  const slugData = await getGeoNameId(slugEndPoint)
-  const geoNameIdEndPoint = slugData._links['ua:identifying-city'].href
-  const scoresEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/scores`
-  const imagesEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/images`
-  const dataEndPoints = [slugEndPoint, scoresEndPoint, geoNameIdEndPoint, imagesEndPoint]
-  const cityData = await fetchBatchData(dataEndPoints)
-  const parsedCityData = createSingleCityObj(cityData)
-  navigate(`/urbanAreaDetails/${parsedCityData.name}`, {state: parsedCityData})
-}
+  const handleSearch = async (e) => {
+    e.preventDefault()
+    console.log('e', e)
+    if (selectedOption === null) {
+      setError('Please select a city')
+      return
+    }
+    const slugEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/`
+    const slugData = await getGeoNameId(slugEndPoint)
+    const geoNameIdEndPoint = slugData._links['ua:identifying-city'].href
+    const scoresEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/scores`
+    const imagesEndPoint = `https://api.teleport.org/api/urban_areas/slug:${selectedOption}/images`
+    const dataEndPoints = [slugEndPoint, scoresEndPoint, geoNameIdEndPoint, imagesEndPoint]
+    const cityData = await fetchBatchData(dataEndPoints)
+    const parsedCityData = createSingleCityObj(cityData)
+    navigate(`/urbanAreaDetails/${parsedCityData.name}`, {state: parsedCityData})
+  }
+
   return (
     <section className='main-content'>
-      {error && <h1>{error}</h1>}
       <Header />
       <form className='select-search-container'>
-        <button className='search-button'>
+        <button className='search-button' type='submit'>
           <img 
           alt='blue magnifying glass icon' 
           src={magnifyingGlass} 
@@ -81,11 +81,17 @@ const handleSearch = async (e) => {
         <Select 
           defaultValue={selectedOption}
           onChange={handleSelectedOption}
+          onFocus={() => setError(null)}
           options={urbanAreaList}
           className='select-menu'
           placeholder='Search or select a city'
-        />
+          autoFocus
+          blurInputOnSelect
+          styles={customStyles}
+          theme={customTheme}
+          />
       </form>
+      {error && <h1 className='error-msg'>{error}</h1>}
       {isLoading ? 
       <HashLoader 
         color='#2E84FF' 
@@ -95,7 +101,7 @@ const handleSearch = async (e) => {
       <RandomCities  
         cityList={randomCities}  
       />
-    }
+      }
     </section>
   )
 }

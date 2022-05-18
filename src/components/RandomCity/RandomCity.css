@@ -1,24 +1,24 @@
 .city-img-container {
-  position: relative;
-  max-width: 85%;
+  max-width: 90%;
   margin: 0 auto;
-  margin-bottom: 1.25rem;
 }
 
 .city-img {
   width: 100%;
   object-fit: cover;
-  object-position: top;
   border-radius: 10px;
-  max-height: 12rem;  
+  height: 12rem;  
 }
 
 .city-name {
   color: white;
-  position: absolute;
-  top: 80%;
   width: 100%;
-  margin: 0;
   text-align: center;
-  text-shadow: 10px 2px 15px black;
+  transform: translateY(-3rem);
+  background-color: hsla(0, 0%, 0%, 0.35);
+  border-radius: 0 0 10px 10px;
+  margin-bottom: -1.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
