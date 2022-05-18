@@ -4,6 +4,10 @@ header {
   align-items: center;
 }
 
+.img-container {
+  margin-top: 1.4rem;
+}
 .question {
   font-weight: 700;
+  margin-top: 0.3rem;
 }

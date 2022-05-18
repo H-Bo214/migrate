@@ -10,7 +10,7 @@ const LocationPopulation = ( { latitude, longitude, population } ) => {
           alt ='blue pin-drop icon'
           src={pinDrop}
         />
-        <h2 className='demo-heading'>Location</h2>
+        <h2 className='demographic-heading'>Location</h2>
         <p className='latitude'>{latitude},</p>
         <p className='longitude'>{longitude}</p>
       </div>
@@ -19,7 +19,7 @@ const LocationPopulation = ( { latitude, longitude, population } ) => {
           alt='blue crowd of people icon'
           src={people}
         />
-        <h2 className='demo-heading'>Population</h2>
+        <h2 className='demographic-heading'>Population</h2>
         <p className='population'>{population}</p>
       </div>
     </section>

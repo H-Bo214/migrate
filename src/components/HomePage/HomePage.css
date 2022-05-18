@@ -4,6 +4,10 @@
 
 .select-search-container {
   display: flex;
+  border: 1px solid rgba(80, 226, 230, 0.75);
+  box-shadow: 0px 4px 7px rgba(80, 226, 230, 0.1);
+  border-radius: 35px;
+  padding: 3px 10px;
 }
 
 .select-menu {
@@ -17,4 +21,13 @@ cursor: pointer;
 .search-button {
   border: none;
   background-color: #fff;
+}
+
+.error-msg {
+  color: #2E84FF;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.select-menu::placeholder {
+  color: #000;
 }
