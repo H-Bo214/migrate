@@ -1,16 +1,17 @@
 import RandomCity from "../RandomCity/RandomCity"
-import { cleanData, makeCityUrlsArr } from '../../helpers'
+import { cleanData, makeCityEndPointsArr } from '../../helpers'
 import { useNavigate } from 'react-router-dom'
 import {  fetchBatchData } from '../../apiCalls'
 import './RandomCities.css'
-const RandomCities = ( { cityList } ) => {
+const RandomCities = ( { cityList, setIsLoading } ) => {
   const navigate = useNavigate()
   
   const handleFetchCityDetails = async (cityName) => {
+    setIsLoading(true)
     const cityToGet = cityList.find(city => city.name === cityName)
-    const urlArray = makeCityUrlsArr(cityToGet)
-    const fetchedCityDetails = await fetchBatchData(urlArray)
-    const cityData = cleanData(fetchedCityDetails, cityToGet.image)
+    const endPoints = makeCityEndPointsArr(cityToGet)
+    const cityDetails = await fetchBatchData(endPoints)
+    const cityData = cleanData(cityDetails, cityToGet.image)
     navigate(`/urbanAreaDetails/${cityToGet.name}`, {state: cityData})
   }
 
