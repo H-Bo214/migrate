@@ -114,6 +114,5 @@ const HomePage = () => {
     </section>
   )
 }
-console.log('customStyles', customStyles)
 
 export default HomePage

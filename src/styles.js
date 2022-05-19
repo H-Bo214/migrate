@@ -15,10 +15,13 @@ export const customStyles = {
     ...provided,
     color: '#51707b',
   }),
+  indicatorSeparator: (provided) => ({
+    ...provided,
+    backgroundColor:'#50E2E6'
+  }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
     const transition = 'opacity 300ms';
-    
     return { ...provided, opacity, transition };
   }
 }

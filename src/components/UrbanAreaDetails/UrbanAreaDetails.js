@@ -10,7 +10,6 @@ const UrbanAreaDetails = () => {
   let {cityName} = useParams()
   let location = useLocation()
   let { state } = location
-  // console.log('state', state)
   const { 
     img, 
     name, 
@@ -37,7 +36,10 @@ const UrbanAreaDetails = () => {
         longitude={longitude}
         population={population}
       />
-      <Categories scores={scores}/>
+      <Categories 
+      scores={scores}
+      // isCompleted={isCompleted}
+      />
       <Summary summary={summary}/>
     </main>
   )

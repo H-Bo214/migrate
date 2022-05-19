@@ -1,10 +1,27 @@
 import './Category.css'
+import { useEffect, useState } from 'react'
 
 const Category = ( { categoryScore, categoryName, icon } ) => {
-  
+  const [progressBarStyle, setProgressBarStyle] = useState({})
+
+  useEffect(() => {
+    const startTimeout = () => {
+      setTimeout(() => {
+        const newStyle = {
+          opacity: 1, 
+          width: `${categoryScore * 10}%`,
+          transition: '1000ms',
+        }
+        setProgressBarStyle(newStyle)
+      }, 500)
+    }
+    startTimeout()
+    return clearTimeout()
+  },)
+
   const formatCategoryScore = (score) => {
     if (score === 0) return 0
-    if (score >= 9.5) return 10
+    if (score >= 9.9 || score === 10.0) return 10
     return score.toFixed(1)
   }
 
@@ -16,14 +33,18 @@ const Category = ( { categoryScore, categoryName, icon } ) => {
         </div>
         <p className='category-name'>{categoryName}</p>
       </section>
-      <section className='category-score'>
-        <div className='fill-bar'>
-          <div className='fill-bar-progress'></div>
-        </div>
-        <div className='score-container'>
+      <div className='all-scores-container'>
+        <section>
+          <div className='progress-bar'>
+            <div className='progress-bar-fill' style={progressBarStyle}></div>
+          </div>
+        </section>
+
+        <section className='score-container'>
           <p className='score'>{formatCategoryScore(categoryScore)}</p>
-        </div>
-      </section>
+        </section>
+
+      </div>
     </div>
   )
 }

@@ -6,15 +6,23 @@ import leaf from '../../assets/images/leaf.svg'
 import './Categories.css'
 
 const Categories = ( { scores } ) => {
-  // console.log('scores IN CAT', scores['Cost of Living'])
   const costOfLiving = scores['Cost of Living']
   const taxation = scores['Taxation']
   const healthcare = scores['Healthcare']
   const environmentalQuality = scores['Environmental Quality']
 
+  console.log('scores in Categories', scores)
+
+  const allCategoryScores = scores.map( category => {
+    console.log('category', category)
+    const title = Object.keys(category)
+
+    return <Category categoryName={title} categoryScore={category[title]} icon={house} key={title}/>
+  })
   return (
     <section className="all-categories-container">
-      <Category 
+      {<section>{allCategoryScores}</section>}
+      {/* <Category 
         categoryName='Cost of living' 
         categoryScore={costOfLiving}
         icon={house}
@@ -33,7 +41,7 @@ const Categories = ( { scores } ) => {
         categoryName='Environmental quality'
         categoryScore={environmentalQuality}
         icon={leaf}
-      />
+      /> */}
     </section>
   )
 }
