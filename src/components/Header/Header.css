@@ -10,4 +10,6 @@ header {
 .question {
   font-weight: 700;
   margin-top: 0.3rem;
+  letter-spacing: .2px;
+  color: #000;
 }

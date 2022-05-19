@@ -4,12 +4,10 @@
   align-items: center;
 }
 
-.city-name-container{
-}
-
 .city {
   margin-left: 1.6rem;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 .rating-container {
   display: flex;
@@ -23,4 +21,9 @@
 
 .overall-score {
   margin-right: 1.5rem;
+  font-size: 1rem;
+}
+
+.overall-rating {
+  font-size: 1.5rem;
 }

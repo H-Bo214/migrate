@@ -6,16 +6,13 @@
 .urban-area-img-container {
   position: relative;
   margin: 0 auto;
+  height: 30vh
 }
 
 .urban-area-img {
-  /* width: 100%; */
-  /* max-width: 100%;
-  object-fit: cover; */
-  /* height: 17rem;   */
-
   width: 100%;
   object-fit: cover;
-  object-position: center;
   height: 30vh;
+  background: #C4C4C4;
+  mix-blend-mode: multiply; 
 }

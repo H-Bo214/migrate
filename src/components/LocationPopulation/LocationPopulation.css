@@ -1,6 +1,6 @@
 .location-population-container {
   display: flex;
-  margin-top: 2.4rem;
+  margin-top: 1rem;
   padding-top: 1.25rem;
   padding-bottom: 1rem;
   position: relative;
@@ -12,7 +12,7 @@
   height: 1px;
   background: rgba(110, 111, 112, 0.25);
   top: 0px;
-  width: 85%;
+  width: 87%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -23,7 +23,7 @@
   height: 1px;
   background: rgba(110, 111, 112, 0.25);
   bottom: 3px;
-  width: 85%;
+  width: 87%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -53,12 +53,14 @@
 .demographic-heading {
   font-size: 1rem;
   margin: 0 0 .25rem 0;
+  font-weight: 700;
 }
 
 .latitude, .longitude, .population {
   margin: 0;
   line-height: 23px;
   letter-spacing: 0.2px;
+  color: #000;
 }
 
 /* .longitude {

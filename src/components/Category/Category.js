@@ -1,6 +1,13 @@
 import './Category.css'
 
 const Category = ( { categoryScore, categoryName, icon } ) => {
+  
+  const formatCategoryScore = (score) => {
+    if (score === 0) return 0
+    if (score >= 9.5) return 10
+    return score.toFixed(1)
+  }
+
   return (
     <div className='category-container'>
       <section className='category'>
@@ -13,8 +20,8 @@ const Category = ( { categoryScore, categoryName, icon } ) => {
         <div className='fill-bar'>
           <div className='fill-bar-progress'></div>
         </div>
-        <div>
-          <p className='score'>{categoryScore.toFixed(1)}</p>
+        <div className='score-container'>
+          <p className='score'>{formatCategoryScore(categoryScore)}</p>
         </div>
       </section>
     </div>
