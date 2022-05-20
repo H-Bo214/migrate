@@ -1,10 +1,26 @@
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 100vw;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90.17deg, #4262F6 0%, #8AFBFB 70%);
+  border-radius: 100vw;
+}
+
 .all-categories-container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-top: .5rem;
   position: relative;
-  height: 19vh;
+  height: 10rem;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 .all-categories-container::after {

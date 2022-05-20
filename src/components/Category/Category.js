@@ -5,6 +5,7 @@ const Category = ( { categoryScore, categoryName, icon } ) => {
   const [progressBarStyle, setProgressBarStyle] = useState({})
 
   useEffect(() => {
+    console.log('rendered')
     const startTimeout = () => {
       setTimeout(() => {
         const newStyle = {
@@ -16,8 +17,8 @@ const Category = ( { categoryScore, categoryName, icon } ) => {
       }, 500)
     }
     startTimeout()
-    return clearTimeout()
-  },)
+    return clearTimeout(startTimeout)
+  },[])
 
   const formatCategoryScore = (score) => {
     if (score === 0) return 0

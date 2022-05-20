@@ -14,7 +14,7 @@ const Categories = ( { scores } ) => {
   console.log('scores in Categories', scores)
 
   const allCategoryScores = scores.map( category => {
-    console.log('category', category)
+    // console.log('category', category)
     const title = Object.keys(category)
 
     return <Category categoryName={title} categoryScore={category[title]} icon={house} key={title}/>

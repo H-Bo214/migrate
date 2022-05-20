@@ -1,6 +1,6 @@
 import Header from '../Header/Header'
 import RandomCities from '../RandomCities/RandomCities'
-import HashLoader from 'react-spinners/HashLoader'
+import PulseLoader from 'react-spinners/PulseLoader'
 import Select from 'react-select'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, createDropDownOptions, cleanData } from '../../helpers'
@@ -101,10 +101,10 @@ const HomePage = () => {
       </form>
       {error && <h1 className='error-msg'>{error}</h1>}
       {isLoading ? 
-      <HashLoader 
-      color='#2E84FF' 
+      <PulseLoader 
+      color='#3EDCEB' 
       loading={isLoading} 
-      size={100} 
+      size={40} 
       css={spinnerStyle}/>  :
       <RandomCities  
       cityList={randomCities}

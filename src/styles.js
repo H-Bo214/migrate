@@ -62,6 +62,9 @@ export const customTheme = (theme) => {
 }
 
 export const spinnerStyle = css`
-display: flex;
-margin: 3rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  margin-top: 8rem;
+  color: 'red';
 `
