@@ -11,7 +11,7 @@ const CityRating = ( { cityName, rating } ) => {
       <div className='rating-container'>
         <img 
           src={star}
-          alt='Blue star icon'
+          alt='Blue star icon.'
           className='star-icon'
         />
         <p className='overall-score'><span className ='overall-rating'>{overallRating}</span> / 100</p>
