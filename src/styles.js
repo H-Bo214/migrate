@@ -65,6 +65,4 @@ export const spinnerStyle = css`
   display: flex;
   justify-content: center;
   vertical-align: center;
-  margin-top: 8rem;
-  color: 'red';
-`
+  margin-top: 8rem;`
