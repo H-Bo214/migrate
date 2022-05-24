@@ -1,47 +1,51 @@
 import Category from "../Category/Category"
 import house from '../../assets/images/house.svg'
-import document from '../../assets/images/document.svg'
-import hand from '../../assets/images/hand.svg'
-import leaf from '../../assets/images/leaf.svg'
+import costOfLiving from '../../assets/images/cost-of-living.svg'
+import startUps from '../../assets/images/start-ups.svg'
+import ventureCapital from '../../assets/images/venture-capital.svg'
+import travel from '../../assets/images/travel.svg'
+import commute from '../../assets/images/commute.svg'
+import businessFreedom from '../../assets/images/business-freedom.svg'
+import safety from '../../assets/images/safety.svg'
+import healthcare from '../../assets/images/healthcare.svg'
+import education from '../../assets/images/education.svg'
+import environmentalQuality from '../../assets/images/environmental-quality.svg'
+import economy from '../../assets/images/economy.svg'
+import taxation from '../../assets/images/taxation.svg'
+import internetAccess from '../../assets/images/internet-access.svg'
+import leisureCulture from '../../assets/images/leisure-culture.svg'
+import tolerance from '../../assets/images/tolerance.svg'
+import outdoors from '../../assets/images/outdoors.svg'
 import './Categories.css'
 
 const Categories = ( { scores } ) => {
-  const costOfLiving = scores['Cost of Living']
-  const taxation = scores['Taxation']
-  const healthcare = scores['Healthcare']
-  const environmentalQuality = scores['Environmental Quality']
+  const icons = [
+    house,
+    costOfLiving,
+    startUps,
+    ventureCapital,
+    travel,
+    commute,
+    businessFreedom,
+    safety,
+    healthcare,
+    education,
+    environmentalQuality,
+    economy,
+    taxation,
+    internetAccess,
+    leisureCulture,
+    tolerance,
+    outdoors
+  ]
 
-  console.log('scores in Categories', scores)
-
-  const allCategoryScores = scores.map( category => {
-    // console.log('category', category)
+  const allCategoryScores = scores.map((category, index) => {
     const title = Object.keys(category)
-
-    return <Category categoryName={title} categoryScore={category[title]} icon={house} key={title}/>
+    return <Category categoryName={title} categoryScore={category[title]} key={title} icon={icons[index]}/>
   })
   return (
     <section className="all-categories-container">
       {<section>{allCategoryScores}</section>}
-      {/* <Category 
-        categoryName='Cost of living' 
-        categoryScore={costOfLiving}
-        icon={house}
-      />
-      <Category 
-        categoryName='Taxation' 
-        categoryScore={taxation}
-        icon={document}
-      />
-      <Category 
-        categoryName='Healthcare'
-        categoryScore={healthcare}
-        icon={hand}
-      />
-      <Category 
-        categoryName='Environmental quality'
-        categoryScore={environmentalQuality}
-        icon={leaf}
-      /> */}
     </section>
   )
 }
