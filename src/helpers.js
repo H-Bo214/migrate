@@ -58,23 +58,11 @@ export const createDropDownOptions = (cityList) =>  {
   })
 }
 
-// Creates an object with city statistics
+// Creates an array of city statistics to be rendered in the UI
 export const createCityStatistics = (cityStats) => {
-  const test = createCityStatistics2(cityStats)
-  console.log('test', test)
-  const statistics = cityStats.reduce((stat, category) => {
-    stat[category.name] = category.score_out_of_10
-    return stat
-  }, {})
-  return statistics
-}
-
-/// Possibly add an img key with a img file value to pass down all icons to be used when rendering the category name and score with an image icon
-export const createCityStatistics2 = (cityStats) => {
   const statistics2 = cityStats.reduce((stat, category) => {
     const obj ={}
-    obj[[category.name]]= category.score_out_of_10
-    // stat[category.name] = category.score_out_of_10
+    obj[category.name]= category.score_out_of_10
     stat.push(obj)
     return stat
   }, [])
@@ -94,7 +82,7 @@ export const cleanData = (cityData, cityImg = null) => {
   const cityInfo = {
     img: cityImg || result.photos[0].image.mobile,
     name,
-    scores: createCityStatistics2(result.categories),
+    scores: createCityStatistics(result.categories),
     latitude,
     longitude,
     population: population.toLocaleString("en-US"),
@@ -102,4 +90,11 @@ export const cleanData = (cityData, cityImg = null) => {
     rating,
   }
   return cityInfo
+}
+
+// Formats the category score displayed in the UI
+export const formatCategoryScore = (score) => {
+  if (score === 0) return 0
+  if (score >= 9.9 || score === 10.0) return 10
+  return score.toFixed(1)
 }
