@@ -5,7 +5,7 @@ import CityRating from "../CityRating/CityRating"
 import LocationPopulation from "../LocationPopulation/LocationPopulation"
 import Categories from "../Categories/Categories"
 import Summary from "../Summary/Summary"
-import backIcon from '../../assets/images/chevron-arrow.svg'
+import backBlue from '../../assets/images/back-blue.svg'
 import { Link } from 'react-router-dom'
 const UrbanAreaDetails = () => {
   let {cityName} = useParams()
@@ -34,7 +34,7 @@ const UrbanAreaDetails = () => {
         </div>
         <Link to='/'>
           <button className="back-button-parent">
-            <img src={backIcon} alt='back button icon' className="back-button-image" />
+            <img src={backBlue} alt='back button icon' className="back-button-image" />
           </button>
         </Link>
       </section>
