@@ -1,14 +1,13 @@
 import Header from '../Header/Header'
 import RandomCities from '../RandomCities/RandomCities'
+import CitySelectionForm from '../CitySelectionForm/CitySelectionForm'
 import PulseLoader from 'react-spinners/PulseLoader'
-import Select from 'react-select'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, createDropDownOptions, cleanData } from '../../helpers'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import magnifyingGlass from '../../assets/images/magnifying-glass.svg'
 import './HomePage.css'
-import { customStyles, customStyles2, spinnerStyle, customTheme } from '../../styles.js'
+import { spinnerStyle } from '../../styles.js'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -49,6 +48,12 @@ const HomePage = () => {
     setSelectedCity(value)
   }
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch(e)
+    }
+  }
+
   const handleSearch = async (e) => {
     const teleportRootEndpoint = 'https://api.teleport.org/api/urban_areas/slug:'
     e.preventDefault()
@@ -70,45 +75,34 @@ const HomePage = () => {
     ]
     const cityData = await fetchBatchData(dataEndPoints)
     const formattedData = cleanData(cityData)
-
     navigate(`/urbanAreaDetails/${formattedData.name}`, {state: formattedData})
   }
 
   return (
     <section className='main-content'>
       <Header />
-      <form className='select-search-container'>
-        <button className='search-button' type='submit'>
-          <img 
-          alt='blue magnifying glass icon' 
-          src={magnifyingGlass} 
-          onClick={handleSearch}
-          className='search-icon'
-          />
-        </button>
-        <Select 
-          defaultValue={selectedCity}
-          onChange={handleSelectedCity}
-          onFocus={() => setSearchError(false)}
-          options={urbanAreaList}
-          className='select-menu'
-          placeholder='Search or select a city'
-          autoFocus
-          blurInputOnSelect
-          styles={searchError ? customStyles2 : customStyles}
-          theme={customTheme}
-          />
-      </form>
-      {error && <h1 className='error-msg'>{error}</h1>}
+      <CitySelectionForm 
+        handleSearch={handleSearch}
+        selectedCity={selectedCity}
+        handleSelectedCity={handleSelectedCity}
+        urbanAreaList={urbanAreaList}
+        setSearchError={setSearchError}
+        searchError={searchError}
+        handleKeyDown={handleKeyDown}
+      />
+      {error && 
+        <h1 className='error-msg'>{error}</h1>
+      }
       {isLoading ? 
       <PulseLoader 
-      color='#3EDCEB' 
-      loading={isLoading} 
-      size={30} 
-      css={spinnerStyle}/>  :
+        color='#3EDCEB' 
+        loading={isLoading} 
+        size={30} 
+        css={spinnerStyle}
+      /> :
       <RandomCities  
-      cityList={randomCities}
-      setIsLoading={setIsLoading}  
+        cityList={randomCities}
+        setIsLoading={setIsLoading}  
       />
     }
     </section>

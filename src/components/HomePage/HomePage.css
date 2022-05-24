@@ -1,38 +1,5 @@
-.main-content {
-  
-}
-
-.select-search-container {
-  display: flex;
-  border: 1px solid rgba(80, 226, 230, 0.75);
-  border-radius: 35px;
-  padding: 3px 10px;
-  align-items: center;
-  box-shadow: 0px 11px 15px rgb(80 226 230 / 10%);
-}
-
-.select-menu {
-  width: 100%; 
-  caret-color: #2E84FF;
-}
-
-.search-icon {
-cursor: pointer;
-}
-
-.search-button {
-  border: none;
-  background-color: #fff;
-  padding: 0;
-  width: 23px;
-  height: 23px;
-}
-
 .error-msg {
   color: #2E84FF;
   font-size: 1.3rem;
   text-align: center;
-}
-.select-menu::placeholder {
-  color: #000;
 }

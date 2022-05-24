@@ -1,12 +1,10 @@
 import { useParams, useLocation } from "react-router-dom"
-import './UrbanAreaDetails.css'
-import '../CityRating/CityRating'
+import UrbanAreaImage from "../UrbanAreaImage/UrbanAreaImage"
 import CityRating from "../CityRating/CityRating"
 import LocationPopulation from "../LocationPopulation/LocationPopulation"
 import Categories from "../Categories/Categories"
 import Summary from "../Summary/Summary"
-import backBlue from '../../assets/images/back-blue.svg'
-import { Link } from 'react-router-dom'
+
 const UrbanAreaDetails = () => {
   let {cityName} = useParams()
   let location = useLocation()
@@ -24,28 +22,14 @@ const UrbanAreaDetails = () => {
 
   return (
     <main className="main-content-urban-areas">
-      <section className='urban-area-img-container'>
-        <div>
-        <img 
-          src={img} 
-          className='urban-area-img'
-          alt={`${cityName} skyline`}
-        />
-        </div>
-        <Link to='/'>
-          <button className="back-button-parent">
-            <img src={backBlue} alt='back button icon' className="back-button-image" />
-          </button>
-        </Link>
-      </section>
+      <UrbanAreaImage cityName={cityName} img={img}/>
       <CityRating cityName={name} rating={rating}/>
       <LocationPopulation 
-        latitude={latitude}
-        longitude={longitude}
+        latitude={latitude} 
+        longitude={longitude} 
         population={population}
       />
-      <Categories 
-      scores={scores}
+      <Categories scores={scores}
       />
       <Summary summary={summary}/>
     </main>
