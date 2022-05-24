@@ -104,7 +104,7 @@ const HomePage = () => {
       <PulseLoader 
       color='#3EDCEB' 
       loading={isLoading} 
-      size={40} 
+      size={30} 
       css={spinnerStyle}/>  :
       <RandomCities  
       cityList={randomCities}
