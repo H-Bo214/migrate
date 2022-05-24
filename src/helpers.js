@@ -58,13 +58,15 @@ export const createDropDownOptions = (cityList) =>  {
   })
 }
 
-// Creates an object with city statistics
+// Creates an array of city statistics to be rendered in the UI
 export const createCityStatistics = (cityStats) => {
-  const statistics = cityStats.reduce((stat, category) => {
-    stat[category.name] = category.score_out_of_10
+  const statistics2 = cityStats.reduce((stat, category) => {
+    const obj ={}
+    obj[category.name]= category.score_out_of_10
+    stat.push(obj)
     return stat
-  }, {})
-  return statistics
+  }, [])
+  return statistics2
 }
 
 // Formats the city data into a single object
@@ -88,4 +90,11 @@ export const cleanData = (cityData, cityImg = null) => {
     rating,
   }
   return cityInfo
+}
+
+// Formats the category score displayed in the UI
+export const formatCategoryScore = (score) => {
+  if (score === 0) return 0
+  if (score >= 9.9 || score === 10.0) return 10
+  return score.toFixed(1)
 }

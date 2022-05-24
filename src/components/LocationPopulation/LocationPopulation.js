@@ -1,13 +1,13 @@
-import './LocationPopulation.css'
 import pinDrop from '../../assets/images/pin.svg'
 import people from '../../assets/images/people.svg'
+import './LocationPopulation.css'
 
 const LocationPopulation = ( { latitude, longitude, population } ) => {
   return (
     <section className='location-population-container'>
       <div className='location-container'>
         <img 
-          alt ='blue pin-drop icon'
+          alt ='Blue pin-drop icon.'
           src={pinDrop}
         />
         <h2 className='demographic-heading'>Location</h2>
@@ -16,7 +16,7 @@ const LocationPopulation = ( { latitude, longitude, population } ) => {
       </div>
       <div className='population-container'>
         <img 
-          alt='blue crowd of people icon'
+          alt='Blue crowd of people icon.'
           src={people}
         />
         <h2 className='demographic-heading'>Population</h2>

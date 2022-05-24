@@ -1,6 +1,5 @@
 import { useParams, useLocation } from "react-router-dom"
-import './UrbanAreaDetails.css'
-import '../CityRating/CityRating'
+import UrbanAreaImage from "../UrbanAreaImage/UrbanAreaImage"
 import CityRating from "../CityRating/CityRating"
 import LocationPopulation from "../LocationPopulation/LocationPopulation"
 import Categories from "../Categories/Categories"
@@ -10,7 +9,6 @@ const UrbanAreaDetails = () => {
   let {cityName} = useParams()
   let location = useLocation()
   let { state } = location
-  // console.log('state', state)
   const { 
     img, 
     name, 
@@ -24,20 +22,15 @@ const UrbanAreaDetails = () => {
 
   return (
     <main className="main-content-urban-areas">
-      <section className='urban-area-img-container'>
-        <img 
-          src={img} 
-          className='urban-area-img'
-          alt={`${cityName} skyline`}
-        />
-      </section>
+      <UrbanAreaImage cityName={cityName} img={img}/>
       <CityRating cityName={name} rating={rating}/>
       <LocationPopulation 
-        latitude={latitude}
-        longitude={longitude}
+        latitude={latitude} 
+        longitude={longitude} 
         population={population}
       />
-      <Categories scores={scores}/>
+      <Categories scores={scores}
+      />
       <Summary summary={summary}/>
     </main>
   )

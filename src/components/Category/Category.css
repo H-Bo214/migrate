@@ -1,6 +1,7 @@
 .category-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: -0.5rem;
 }
 
 .category {
@@ -12,24 +13,38 @@
 .category-name {
   margin-left: .6rem;
   font-size: .9rem;
+  font-weight: 400;
 }
 
-.category-score {
+.all-scores-container {
   display: flex;
   align-items: center;
 }
 
-
-.fill-bar {
+.progress-bar {
   background-color: #d8d8d8;
 	border-radius: 20px;
-	position: relative;
 	margin: 15px 0;
 	height: 6px;
 	width: 96px;
 }
 
+.progress-bar-fill {
+  background: linear-gradient(90.17deg, #4262F6 0%, #8AFBFB 102.72%);
+	border-radius: 20px;
+	margin: 15px 0;
+	height: 6px;
+  
+	width: 0px;
+}
+
+.score-container {
+  margin-left: .9rem
+}
+
 .score {
-  margin-left: .5rem;
+  width: .9rem;
   font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
