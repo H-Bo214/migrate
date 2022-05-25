@@ -5,15 +5,15 @@ import './LocationPopulation.css'
 const LocationPopulation = ( { latitude, longitude, population } ) => {
   return (
     <section className='location-population-container'>
-      <div className='location-container'>
+      <a href={`https://www.google.com/maps?q=${latitude},${longitude}`} className='location-container' target='-blank'>
         <img 
-          alt ='Blue pin-drop icon.'
+          alt ='Blue pin-drop icon. Opens google maps to the city coordinates specified.'
           src={pinDrop}
         />
         <h2 className='demographic-heading'>Location</h2>
         <p className='latitude'>{latitude},</p>
         <p className='longitude'>{longitude}</p>
-      </div>
+      </a>
       <div className='population-container'>
         <img 
           alt='Blue crowd of people icon.'
