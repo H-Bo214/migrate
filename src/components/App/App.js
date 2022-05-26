@@ -4,12 +4,13 @@ import UrbanAreaDetails from '../UrbanAreaDetails/UrbanAreaDetails'
 import Error from '../Error/Error'
 
 function App() {
+  const error = 'Page not found. Please return to the home page'
   return (
     <>
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route path='/urbanAreaDetails/:cityName' element={<UrbanAreaDetails />}/>
-        <Route path ='*' element={<Error />} />
+        <Route path ='*' element={<Error errorMsg={error}/>} />
       </Routes>
     </>
   )

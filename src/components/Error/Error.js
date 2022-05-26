@@ -1,6 +1,6 @@
-const Error = () => {
+const Error = ( { errorMsg } ) => {
   return (
-    <h1>An error occurred. Page not found</h1>
+    <h1>{errorMsg}</h1>
   )
 }
 
