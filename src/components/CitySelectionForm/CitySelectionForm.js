@@ -2,6 +2,7 @@ import Select from 'react-select'
 import './CitySelectionForm.css'
 import magnifyingGlass from '../../assets/images/magnifying-glass.svg'
 import { customStyles, customStyles2, customTheme } from '../../styles.js'
+import PropTypes from 'prop-types'
 
 const CitySelectionForm = ( { 
   handleSearch, 
@@ -12,9 +13,9 @@ const CitySelectionForm = ( {
   setSearchError, 
   searchError 
   } ) => {
-
+    
   return (
-    <form className='select-search-container' role='search' name='city-search'>
+    <form className='select-search-container' role='search' id='city-search'>
         <button className='search-button' type='submit'>
           <img 
           alt='Blue magnifying glass search icon.' 
@@ -38,6 +39,10 @@ const CitySelectionForm = ( {
           />
       </form>
   )
+}
+
+CitySelectionForm.propTypes = {
+  setSearchError: PropTypes.func,
 }
 
 export default CitySelectionForm
