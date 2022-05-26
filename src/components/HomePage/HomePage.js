@@ -1,6 +1,7 @@
 import Header from '../Header/Header'
 import RandomCities from '../RandomCities/RandomCities'
 import CitySelectionForm from '../CitySelectionForm/CitySelectionForm'
+import Error from '../Error/Error'
 import PulseLoader from 'react-spinners/PulseLoader'
 import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, createDropDownOptions, cleanData } from '../../helpers'
@@ -90,21 +91,19 @@ const HomePage = () => {
         searchError={searchError}
         handleKeyDown={handleKeyDown}
       />
-      {error && 
-        <h1 className='error-msg'>{error}</h1>
-      }
+      {error && <Error  errorMsg={error}/>}
       {isLoading ? 
-      <PulseLoader 
-        color='#3EDCEB' 
-        loading={isLoading} 
-        size={30} 
-        css={spinnerStyle}
-      /> :
-      <RandomCities  
-        cityList={randomCities}
-        setIsLoading={setIsLoading}  
-      />
-    }
+        <PulseLoader 
+          color='#3EDCEB' 
+          loading={isLoading} 
+          size={30} 
+          css={spinnerStyle}
+        /> :
+        <RandomCities  
+          cityList={randomCities}
+          setIsLoading={setIsLoading}  
+        />
+      }
     </section>
   )
 }
