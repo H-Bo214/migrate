@@ -75,6 +75,7 @@ const HomePage = () => {
       imagesEndPoint
     ]
     const cityData = await fetchBatchData(dataEndPoints)
+    console.log('cityData', cityData)
     const formattedData = cleanData(cityData)
     navigate(`/urbanAreaDetails/${formattedData.name}`, {state: formattedData})
   }
