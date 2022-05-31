@@ -18,7 +18,7 @@ const Category = ( { categoryScore, categoryName, icon } ) => {
     }
     startTimeout()
     return clearTimeout(startTimeout)
-  },[])
+  },[categoryScore])
 
   return (
     <div className='category-container'>

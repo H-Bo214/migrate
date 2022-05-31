@@ -1,9 +1,7 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import CitySelectionForm from '../CitySelectionForm/CitySelectionForm'
 import { MemoryRouter } from 'react-router-dom'
-import { fetchBatchData } from '../../apiCalls'
-jest.mock('../../apiCalls.js')
 
 describe('CitySelectionForm', () => {
   it('should render a city search input', () => {
@@ -155,19 +153,9 @@ describe('CitySelectionForm', () => {
     fireEvent.keyDown(combobox, {
       key:'Enter',
       code: 'Enter',
-      keyCode: 13,
       charCode: 13
     })
-
     expect(handleKeyDown).toHaveBeenCalledTimes(1)
   })
-
-
-
-
-
-
-
-
 
 })

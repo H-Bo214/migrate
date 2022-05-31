@@ -36,6 +36,7 @@ const CitySelectionForm = ( {
           styles={searchError ? customStyles2 : customStyles}
           theme={customTheme}
           onKeyDown={handleKeyDown}
+          classNamePrefix='select'
           />
       </form>
   )
