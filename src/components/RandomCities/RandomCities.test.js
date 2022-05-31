@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import RandomCities from '../RandomCities/RandomCities'
 import { MemoryRouter } from 'react-router-dom'
-import cityList from '../../testData.js'
+import  cityList from '../../testData'
 
 describe('RandomCities', () => {
   it('should render a statement', () => {
