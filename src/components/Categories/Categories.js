@@ -41,11 +41,16 @@ const Categories = ( { scores } ) => {
 
   const allCategoryScores = scores.map((category, index) => {
     const title = Object.keys(category)
-    return <Category categoryName={title} categoryScore={category[title]} key={title} icon={icons[index]}/>
+    return <Category 
+      categoryName={title} 
+      categoryScore={category[title]} 
+      key={title} 
+      icon={icons[index]}
+    />
   })
   return (
     <section className="all-categories-container">
-      {<section>{allCategoryScores}</section>}
+      <section>{allCategoryScores}</section>
     </section>
   )
 }

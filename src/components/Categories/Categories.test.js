@@ -11,7 +11,7 @@ describe('Categories', () => {
         scores={scores}         
       />, {wrapper: MemoryRouter}
     )
-    const image = screen.getByRole('img', {  name: /housing icon/i})
+    const image = screen.getByRole('img', {  name: /housing icon/i })
     const housing = screen.getByText(/housing/i)
     const score = screen.getByText(/8.9/i)
     expect(image).toBeInTheDocument()

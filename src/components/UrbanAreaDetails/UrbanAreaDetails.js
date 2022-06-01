@@ -19,7 +19,8 @@ const UrbanAreaDetails = () => {
     scores,
     summary 
   } = state
-
+console.log('rating', rating)
+console.log('cityName', cityName)
   return (
     <main className="main-content-urban-areas">
       <UrbanAreaImage cityName={cityName} img={img}/>

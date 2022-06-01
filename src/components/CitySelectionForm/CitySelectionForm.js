@@ -16,29 +16,29 @@ const CitySelectionForm = ( {
     
   return (
     <form className='select-search-container' role='search' id='city-search'>
-        <button className='search-button' type='submit'>
-          <img 
+      <button className='search-button' type='submit'>
+        <img 
           alt='Blue magnifying glass search icon.' 
           src={magnifyingGlass} 
           onClick={handleSearch}
           className='search-icon'
-          />
-        </button>
-        <Select 
-          defaultValue={selectedCity}
-          onChange={handleSelectedCity}
-          onFocus={() => setSearchError(false)}
-          options={urbanAreaList}
-          className='select-menu'
-          placeholder='Search or select a city'
-          autoFocus
-          blurInputOnSelect={false}
-          styles={searchError ? customStyles2 : customStyles}
-          theme={customTheme}
-          onKeyDown={handleKeyDown}
-          classNamePrefix='select'
-          />
-      </form>
+        />
+      </button>
+      <Select 
+        defaultValue={selectedCity}
+        onChange={handleSelectedCity}
+        onFocus={() => setSearchError(false)}
+        options={urbanAreaList}
+        className='select-menu'
+        placeholder='Search or select a city'
+        autoFocus
+        blurInputOnSelect={false}
+        styles={searchError ? customStyles2 : customStyles}
+        theme={customTheme}
+        onKeyDown={handleKeyDown}
+        classNamePrefix='select'
+      />
+    </form>
   )
 }
 

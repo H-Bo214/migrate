@@ -126,6 +126,36 @@ describe('CitySelectionForm', () => {
     expect(handleSearch).toHaveBeenCalledTimes(1)
   })
 
+  it('should empty out the city value once the click event takes place', () => {
+    const handleSearch = jest.fn( e => e.preventDefault())
+    const setSearchError = jest.fn()
+    
+    render(
+      <CitySelectionForm 
+        setSearchError={setSearchError}         
+        handleSearch={handleSearch}
+      />, {wrapper: MemoryRouter}
+    )
+
+    const magnifyingGlass = screen.getByRole('img', {
+      name: /blue magnifying glass search icon\./i
+    })
+    expect(magnifyingGlass).toBeInTheDocument()
+
+    const combobox = screen.getByRole('combobox')
+    expect(combobox).toBeInTheDocument()
+
+    fireEvent.change(combobox, {target: {value: 'Seattle'}})
+    expect(combobox.getAttribute('value')).toBe('Seattle')
+    
+    fireEvent.click(magnifyingGlass)
+
+    expect(handleSearch).toHaveBeenCalledTimes(1)
+
+    fireEvent.change(combobox, {target: {value: ''}})
+    expect(combobox.getAttribute('value')).toBe('')
+  })
+
   it('should initiate a request for city information on Enter key press', () => {
     const handleSearch = jest.fn( e => e.preventDefault())
     const setSearchError = jest.fn()
