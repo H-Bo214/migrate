@@ -17,7 +17,7 @@ describe('RandomCities', () => {
     expect(h2).toBeInTheDocument()
   })
 
-  it('should render all city images', () => {
+  it('should render all city images on page load', () => {
     const setIsLoading = jest.fn()
     render(
       <RandomCities 
@@ -36,7 +36,7 @@ describe('RandomCities', () => {
     expect(kingston).toBeInTheDocument()
   })
 
-  it('should render all city names', () => {
+  it('should render all city names on page load', () => {
     const setIsLoading = jest.fn()
     render(
       <RandomCities 
