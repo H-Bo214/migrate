@@ -81,7 +81,50 @@ describe('LocationPopulation', () => {
     expect(longitude).toBeInTheDocument()
   })
 
+  it ('should render a population icon', () => {
+    const lat = 45.52345
+    const long = -122.67621
+    const pop = 632309
+    render (
+      <LocationPopulation 
+        latitude={lat}
+        longitude={long}
+        population={pop}
+      />, {wrapper: MemoryRouter}
+    )
+    const img = screen.getByRole('img', {  name: /blue crowd of people icon\./i})
+    expect(img).toBeInTheDocument()
+  })
 
+  it ('should render a population heading', () => {
+    const lat = 45.52345
+    const long = -122.67621
+    const pop = 632309
+    render (
+      <LocationPopulation 
+        latitude={lat}
+        longitude={long}
+        population={pop}
+      />, {wrapper: MemoryRouter}
+    )
+    const heading = screen.getByRole('heading', {  name: /population/i})
+    expect(heading).toBeInTheDocument()
+  })
+
+  it ('should render a population count', () => {
+    const lat = 45.52345
+    const long = -122.67621
+    const pop = 632309
+    render (
+      <LocationPopulation 
+        latitude={lat}
+        longitude={long}
+        population={pop}
+      />, {wrapper: MemoryRouter}
+    )
+    const count = screen.getByText(/632309/i)
+    expect(count).toBeInTheDocument()
+  })
 
 
 
