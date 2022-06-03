@@ -2,10 +2,10 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import RandomCity from '../RandomCity/RandomCity'
 import { MemoryRouter } from 'react-router-dom'
-import cityList from '../../testData.js'
+import { cityList } from '../../testData.js'
 
 describe('RandomCity', () => {
-  it('should render a city name', () => {
+  it('should render a city name',  () => {
     const handleFetchCityDetails = jest.fn(e => e.preventDefault(e))
     render(
       <RandomCity
@@ -15,7 +15,7 @@ describe('RandomCity', () => {
       />, {wrapper: MemoryRouter}
     )
     const rochester = screen.getByText(/Rochester, New York/i)
-    expect(rochester).toBeInTheDocument()
+     expect(rochester).toBeInTheDocument()
   })
 
   it('should render a city image', () => {

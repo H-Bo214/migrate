@@ -19,9 +19,7 @@ const UrbanAreaDetails = () => {
     scores,
     summary 
   } = state
-console.log('latitude', latitude)
-console.log('longitude', longitude)
-console.log('population', population)
+
   return (
     <main className="main-content-urban-areas">
       <UrbanAreaImage cityName={cityName} img={img}/>
