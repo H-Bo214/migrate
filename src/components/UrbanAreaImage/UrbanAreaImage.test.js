@@ -4,6 +4,7 @@ import UrbanAreaImage from '../UrbanAreaImage/UrbanAreaImage'
 import { MemoryRouter } from 'react-router-dom'
 
 describe('UrbanAreaImage', () => {
+  
   it ('should render a city image',  () => {
     const cityName = 'Ottawa, Canada'
     const img = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/ottawa-b78a66e47b.jpg'

@@ -82,8 +82,5 @@ const mockState = {
   summary: "Albuquerque, New Mexico, is among the top cities with a free business environment. According to our city rankings, this is a good place to live with high ratings in housing, healthcare and environmental quality."
 
 }
-//  export default cityList
-
-// export {scores, cityList, mockState}
 
 export { cityList, scores, mockState}

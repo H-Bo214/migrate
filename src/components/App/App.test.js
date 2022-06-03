@@ -1,11 +1,10 @@
 import App from '../App/App'
 import LocationDisplay from '../App/App'
 import {render, screen} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import {createMemoryHistory} from 'history'
 import { Router } from 'react-router-dom'
 import '@testing-library/jest-dom'
-import { mockState } from '../../testData'
+
 describe('App', () => {
   it('should render an icon at the home route', () => {
     const history = createMemoryHistory()

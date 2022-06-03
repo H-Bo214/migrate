@@ -6,7 +6,6 @@ import Categories from "../Categories/Categories"
 import Summary from "../Summary/Summary"
 
 const UrbanAreaDetails = () => {
-  let {cityName} = useParams()
   let location = useLocation()
   let { state } = location
   const { 
@@ -22,8 +21,8 @@ const UrbanAreaDetails = () => {
 
   return (
     <main className="main-content-urban-areas">
-      <UrbanAreaImage cityName={cityName} img={img}/>
-      <CityRating cityName={name} rating={rating}/>
+      <UrbanAreaImage cityName={name} img={img} />
+      <CityRating cityName={name} rating={rating} />
       <LocationPopulation 
         latitude={latitude} 
         longitude={longitude} 
@@ -31,7 +30,7 @@ const UrbanAreaDetails = () => {
       />
       <Categories scores={scores}
       />
-      <Summary summary={summary}/>
+      <Summary summary={summary} />
     </main>
   )
 }
