@@ -243,11 +243,4 @@ describe('Categories', () => {
     expect(score).toBeInTheDocument()
   })
 
-
-
-
-
-
-
-
 })

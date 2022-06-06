@@ -83,4 +83,23 @@ const mockState = {
 
 }
 
-export { cityList, scores, mockState}
+const randomCities = [
+  {
+    href: "https://api.teleport.org/api/urban_areas/slug:albuquerque/",
+    name: "Albuquerque"
+  },
+  {
+    href: "https://api.teleport.org/api/urban_areas/slug:anchorage/",
+    name: "Anchorage"
+  },
+  {
+    href: "https://api.teleport.org/api/urban_areas/slug:asheville/",
+    name: "Asheville"
+  },
+  {
+    href: "https://api.teleport.org/api/urban_areas/slug:atlanta/",
+    name: "Atlanta"
+  }
+]
+
+export { cityList, scores, mockState, randomCities}

@@ -3,7 +3,7 @@ import RandomCities from '../RandomCities/RandomCities'
 import CitySelectionForm from '../CitySelectionForm/CitySelectionForm'
 import Error from '../Error/Error'
 import PulseLoader from 'react-spinners/PulseLoader'
-import { fetchUrbanAreas, fetchBatchData, getGeoNameId } from '../../apiCalls'
+import { fetchData, fetchBatchData } from '../../apiCalls'
 import { generateRandomCities, buildCityObject, createDropDownOptions, cleanData } from '../../helpers'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -12,6 +12,7 @@ import { spinnerStyle } from '../../styles.js'
 
 const HomePage = () => {
   const navigate = useNavigate()
+  const urbanAreasAPI = 'https://api.teleport.org/api/continents/geonames%3ANA/urban_areas/'
   const [urbanAreaList, setUrbanAreaList] = useState([])
   const [randomCities, setRandomCities] = useState([])
   const [selectedCity, setSelectedCity] = useState(null)
@@ -19,10 +20,11 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [searchError, setSearchError] = useState(false)
 
+
   useEffect(() => {
    const getUrbanAreas = async () => {
      try {
-      const urbanAreas = await fetchUrbanAreas()
+      const urbanAreas = await fetchData(urbanAreasAPI)
       if (urbanAreas) {
         const urbanAreasList = urbanAreas._links['ua:items']
         const citiesList = createDropDownOptions(urbanAreasList)
@@ -66,7 +68,7 @@ const HomePage = () => {
     const slugEndPoint = `${teleportRootEndpoint}${selectedCity}/`
     const scoresEndPoint = `${teleportRootEndpoint}${selectedCity}/scores`
     const imagesEndPoint = `${teleportRootEndpoint}${selectedCity}/images`
-    const slugData = await getGeoNameId(slugEndPoint)
+    const slugData = await fetchData(slugEndPoint)
     const geoNameIdEndPoint = slugData._links['ua:identifying-city'].href
     const dataEndPoints = [
       slugEndPoint, 

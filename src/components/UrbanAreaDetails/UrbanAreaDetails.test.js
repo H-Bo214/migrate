@@ -7,20 +7,6 @@ import { createMemoryHistory } from 'history'
 import '@testing-library/jest-dom'
 
 describe('UrbanAreaDetails', () => {
-    it('should render a city image', () => {
-    const history = createMemoryHistory()
-    const route = `/urbanAreaDetails/Albuquerque, New Mexico`
-    history.push(route, mockState)
-    console.log('history', history.location)
-    render(
-      <Router location={history.location} navigator={history}>
-        <UrbanAreaDetails />
-      </Router>
-    )
-    const img = screen.getByRole('img', { name: `Albuquerque skyline`})
-    expect(img).toBeInTheDocument()
-  })
-
   it('should render a back button icon', () => {
     const history = createMemoryHistory()
     const route = `/urbanAreaDetails/Albuquerque, New Mexico`
@@ -34,11 +20,10 @@ describe('UrbanAreaDetails', () => {
     expect(backIcon).toBeInTheDocument()
   })
 
-  it ('should return to the home page when back arrow icon is clicked',  () => {
+  it ('should return to the home page when back icon is clicked',  () => {
     const history = createMemoryHistory()
     const route = `/urbanAreaDetails/Albuquerque, New Mexico`
     history.push(route, mockState)
-    console.log('history', history.location)
     render(
       <Router location={history.location} navigator={history}>
         <UrbanAreaDetails />
@@ -49,32 +34,5 @@ describe('UrbanAreaDetails', () => {
     history.push('/')
     expect(history.location.pathname).toBe('/')
   })
-
-  it('should render a city name', () => {
-    const history = createMemoryHistory()
-    const route = `/urbanAreaDetails/Albuquerque, New Mexico`
-    history.push(route, mockState)
-    render(
-      <Router location={history.location} navigator={history}>
-        <UrbanAreaDetails />
-      </Router>
-    )
-    const cityName = screen.getByRole('heading', { name: `Albuquerque`})
-    expect(cityName).toBeInTheDocument()
-  })
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })

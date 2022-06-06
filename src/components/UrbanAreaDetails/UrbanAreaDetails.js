@@ -1,4 +1,4 @@
-import { useParams, useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import UrbanAreaImage from "../UrbanAreaImage/UrbanAreaImage"
 import CityRating from "../CityRating/CityRating"
 import LocationPopulation from "../LocationPopulation/LocationPopulation"
