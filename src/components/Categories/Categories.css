@@ -1,11 +1,11 @@
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
   background: #eee;
   border-radius: 100vw;
-  margin-block: .5em;
+  margin-block: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -16,7 +16,7 @@
 .all-categories-container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   position: relative;
   height: 10rem;
   overflow: scroll;

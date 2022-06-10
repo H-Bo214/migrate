@@ -85,21 +85,63 @@ const mockState = {
 
 const randomCities = [
   {
-    href: "https://api.teleport.org/api/urban_areas/slug:albuquerque/",
-    name: "Albuquerque"
+    geoNameId: "https://api.teleport.org/api/cities/geonameid:5308655/",
+    image: "https://d13k13wj6adfdf.cloudfront.net/urban_areas/phoenix-9fedc88f57.jpg",
+    name: "Phoenix, Arizona",
+    scores: "https://api.teleport.org/api/urban_areas/slug:phoenix/scores",
+    slug: "https://api.teleport.org/api/urban_areas/slug:phoenix/",
+    ua_id: "9tbq3"
   },
   {
-    href: "https://api.teleport.org/api/urban_areas/slug:anchorage/",
-    name: "Anchorage"
+    geoNameId: "https://api.teleport.org/api/cities/geonameid:5263045/",
+    image: "https://d13k13wj6adfdf.cloudfront.net/urban_areas/milwaukee-aa45ba9b6b.jpg",
+    name: "Milwaukee, Wisconsin",
+    scores: "https://api.teleport.org/api/urban_areas/slug:milwaukee/scores",
+    slug: "https://api.teleport.org/api/urban_areas/slug:milwaukee/",
+    ua_id: "dp9kz"
+  },
+  {  
+    geoNameId: "https://api.teleport.org/api/cities/geonameid:6167865/",
+    image: "https://d13k13wj6adfdf.cloudfront.net/urban_areas/toronto-a6fcbe977a.jpg",
+    name: "Toronto, Canada",
+    scores: "https://api.teleport.org/api/urban_areas/slug:toronto/scores",
+    slug: "https://api.teleport.org/api/urban_areas/slug:toronto/",
+    ua_id: "dpz83"
   },
   {
-    href: "https://api.teleport.org/api/urban_areas/slug:asheville/",
-    name: "Asheville"
-  },
-  {
-    href: "https://api.teleport.org/api/urban_areas/slug:atlanta/",
-    name: "Atlanta"
+    geoNameId: "https://api.teleport.org/api/cities/geonameid:5261457/",
+    image: "https://d13k13wj6adfdf.cloudfront.net/urban_areas/madison-3d09b9f142.jpg",
+    name: "Madison, Wisconsin",
+    scores: "https://api.teleport.org/api/urban_areas/slug:madison/scores",
+    slug: "https://api.teleport.org/api/urban_areas/slug:madison/",
+    ua_id: "dp8mj"
   }
 ]
 
-export { cityList, scores, mockState, randomCities}
+const mockUrbanAreas = {
+  count: 2,
+  _links: {
+    curries: [
+      {
+        href:"https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+        name: 'location'
+      },
+      {
+        href:"https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+        name: 'city'
+      },
+    ]
+  ,
+    self: {href: "https://api.teleport.org/api/urban_areas/"},
+    'ua:items': [
+      {href: "https://api.teleport.org/api/urban_areas/slug:albuquerque/",
+      name: 'Albuquerque'
+      },
+      {href: "https://api.teleport.org/api/urban_areas/slug:anchorage/",
+      name: 'Anchorage'
+      }
+    ]
+  }
+}
+
+export { cityList, scores, mockState, randomCities, mockUrbanAreas}

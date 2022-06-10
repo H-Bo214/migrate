@@ -11,8 +11,8 @@
 }
 
 .category-name {
-  margin-left: .6rem;
-  font-size: .9rem;
+  margin-left: 0.6rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -23,28 +23,28 @@
 
 .progress-bar {
   background-color: #d8d8d8;
-	border-radius: 20px;
-	margin: 15px 0;
-	height: 6px;
-	width: 96px;
+  border-radius: 20px;
+  margin: 15px 0;
+  height: 6px;
+  width: 96px;
 }
 
 .progress-bar-fill {
-  background: linear-gradient(90.17deg, #4262F6 0%, #8AFBFB 102.72%);
-	border-radius: 20px;
-	margin: 15px 0;
-	height: 6px;
-  
-	width: 0px;
+  background: linear-gradient(90.17deg, #4262f6 0%, #8afbfb 102.72%);
+  border-radius: 20px;
+  margin: 15px 0;
+  height: 6px;
+
+  width: 0px;
 }
 
 .score-container {
-  margin-left: .9rem
+  margin-left: 0.9rem;
 }
 
 .score {
-  width: .9rem;
-  font-size: .9rem;
+  width: 0.9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.2px;
 }

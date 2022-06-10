@@ -1,0 +1,72 @@
+{
+  "full_name": "Charleston, South Carolina, United States",
+  "geoname_id": 4574324,
+  "location": {
+    "geohash": "djz4mnu16e6pz5z2bnuv",
+    "latlon": {
+      "latitude": 32.77657,
+      "longitude": -79.93092
+    }
+  },
+  "name": "Charleston",
+  "population": 132609,
+  "_links": {
+    "city:admin1_division": {
+      "href": "https://api.teleport.org/api/countries/iso_alpha2:US/admin1_divisions/geonames:SC/",
+      " name": "South Carolina"
+    },
+    "city:alternate-names": {
+      "href": "https://api.teleport.org/api/cities/geonameid:4574324/alternate_names/"
+    },
+    "city:country": {
+      "href": "https://api.teleport.org/api/countries/iso_alpha2:US/",
+      "name": "United States"
+    },
+    "city:timezone": {
+      "href": "https://api.teleport.org/api/timezones/iana:America%2FNew_York/",
+      "name": "America/New_York"
+    },
+    "city:urban_area": {
+      "href": "https://api.teleport.org/api/urban_areas/slug:charleston/",
+      "name": "Charleston"
+    },
+
+    "curies": [
+      {
+        "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+        "name": "location",
+        "template": true
+      },
+      {
+        "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+        "name": "city",
+        "template": true
+      },
+
+      {
+        "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+        "name": "ua",
+        "template": true
+      },
+
+      {
+        "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+        "name": "country",
+        "template": true
+      },
+
+      {
+        "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+        "name": "a1",
+        "template": true
+      },
+
+      {
+        "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+        "name": "tz",
+        "template": true
+      }
+    ],
+    "self": { "href": "https://api.teleport.org/api/cities/geonameid:4574324/" }
+  }
+}

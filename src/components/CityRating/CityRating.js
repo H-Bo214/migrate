@@ -1,23 +1,27 @@
-import './CityRating.css'
-import star from '../../assets/images/star.svg'
+import "./CityRating.css"
+import star from "../../assets/images/star.svg"
+import PropTypes from "prop-types"
 
-const CityRating = ( { cityName, rating } ) => {
+const CityRating = ({ cityName, rating }) => {
   const overallRating = Math.round(rating)
   return (
-    <section className='city-rating-container'>
+    <section className="city-rating-container">
       <div>
-        <h1 className='city'>{cityName}</h1>
+        <h1 className="city">{cityName}</h1>
       </div>
-      <div className='rating-container'>
-        <img 
-          src={star}
-          alt='Blue star icon.'
-          className='star-icon'
-        />
-        <p className='overall-score'><span className ='overall-rating'>{overallRating}</span> / 100</p>
+      <div className="rating-container">
+        <img src={star} alt="Blue star icon." className="star-icon" />
+        <p className="overall-score">
+          <span className="overall-rating">{overallRating}</span> / 100
+        </p>
       </div>
     </section>
   )
+}
+
+CityRating.propTypes = {
+  cityName: PropTypes.string,
+  rating: PropTypes.number
 }
 
 export default CityRating
