@@ -44,7 +44,7 @@ export const makeCityEndPointsArr = (cityObj) => {
 }
 
 // Creates dropdown options for the Select menu
-export const createDropDownOptions = (cityList) =>  {
+export const createDropDownOptions = (cityList) => {
   const regex = /[\W_]+/g
   return cityList.map((city) => {
     let formattedCityName = city.name.toLowerCase().replace(regex, "-")
@@ -61,8 +61,8 @@ export const createDropDownOptions = (cityList) =>  {
 // Creates an array of city statistics to be rendered in the UI
 export const createCityStatistics = (cityStats) => {
   const statistics2 = cityStats.reduce((stat, category) => {
-    const obj ={}
-    obj[category.name]= category.score_out_of_10
+    const obj = {}
+    obj[category.name] = category.score_out_of_10
     stat.push(obj)
     return stat
   }, [])

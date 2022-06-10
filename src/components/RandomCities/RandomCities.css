@@ -5,8 +5,9 @@
 .main-content-random-cities {
   background-color: #EEFCFC;
   border-radius: 15px;
-  margin: 0 auto;
+  margin: 2.5rem auto 0 auto;
   min-width: 20rem;
+  overflow: auto;
 }
 .greeting{
   text-align: center;

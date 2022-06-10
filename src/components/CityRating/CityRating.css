@@ -9,6 +9,7 @@
   font-weight: 700;
   font-size: 1.5rem;
 }
+
 .rating-container {
   display: flex;
   justify-content: space-between;
@@ -16,7 +17,7 @@
 
 .star-icon {
   width: 1rem;
-  margin-right: .125rem;
+  margin-right: 0.125rem;
 }
 
 .overall-score {
