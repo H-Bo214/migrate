@@ -47,5 +47,11 @@ describe('homepage', () => {
       cy.findByRole('img', {  name: /back button icon/i}).should('exist').click()
       cy.findByRole('heading', {name: /Where do you want to live?/i}).should('exist')
     })
+
+    it('should navigate to google maps upon click of location coordinates', () => {
+      cy.intercept('GET', '**/urban_areas/', { fixture: 'urbanAreas.json'})
+      cy.findByRole('combobox').type('Asheville').type('{enter}').type('{enter}')
+      cy.findByRole('heading', {  name: /location/i}).click()
+    })
     
 })

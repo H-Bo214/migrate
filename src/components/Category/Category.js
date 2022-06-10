@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 const Category = ({ categoryScore, categoryName, icon }) => {
   const [progressBarStyle, setProgressBarStyle] = useState({})
-
+  
   useEffect(() => {
     const startTimeout = () => {
       setTimeout(() => {
@@ -45,7 +45,6 @@ const Category = ({ categoryScore, categoryName, icon }) => {
 
 Category.propTypes = {
   categoryScore: PropTypes.number,
-  categoryName: PropTypes.array,
   icon: PropTypes.string
 }
 

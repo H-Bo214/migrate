@@ -17,7 +17,7 @@ describe("Category", () => {
       { wrapper: MemoryRouter }
     )
 
-    const icon = screen.getByRole("img", { name: /housing icon/i })
+    const icon = screen.getByRole("img", { name: /Housing icon/i })
     const categoryTitle = screen.getByText(/housing/i)
     const categoryScore = screen.getByText(/6.7/i)
     expect(icon).toBeInTheDocument()

@@ -4,6 +4,7 @@ import "./LocationPopulation.css"
 import PropTypes from "prop-types"
 
 const LocationPopulation = ({ latitude, longitude, population }) => {
+
   return (
     <section className="location-population-container">
       <a
@@ -31,7 +32,6 @@ const LocationPopulation = ({ latitude, longitude, population }) => {
 LocationPopulation.propTypes = {
   latitude: PropTypes.number,
   longitude: PropTypes.number,
-  population: PropTypes.string,
 }
 
 export default LocationPopulation
