@@ -30,12 +30,12 @@
 }
 
 .progress-bar-fill {
-  background: linear-gradient(90.17deg, #4262f6 0%, #8afbfb 102.72%);
+  background: linear-gradient(90.17deg, #4262F6 0%, #8AFBFB 102.72%);
   border-radius: 20px;
   margin: 15px 0;
   height: 6px;
-
   width: 0px;
+  transform: rotate(-180deg);
 }
 
 .score-container {

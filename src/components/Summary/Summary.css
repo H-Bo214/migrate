@@ -1,5 +1,5 @@
 .summary-container {
-  margin: 1.5rem;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .summary {
@@ -8,4 +8,15 @@
   mix-blend-mode: normal;
   line-height: 24px;
   font-weight: 400;
+  padding-top: 1rem;
+}
+
+.summary-container::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: rgba(110, 111, 112, 0.25);
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
 }
