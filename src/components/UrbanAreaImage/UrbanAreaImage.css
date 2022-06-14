@@ -1,6 +1,6 @@
 .main-content-urban-areas {
   margin: 0 auto;
-  max-width: 32rem;
+  max-width: 26rem;
 }
 
 .urban-area-img-container {
@@ -27,11 +27,11 @@
   border: none;
   margin-left: 0.7rem;
   cursor: pointer;
-  transform: translateY(-15rem);
+  transform: translateY(-15.5rem);
   padding: 0;
 }
 
 .back-button-image {
   vertical-align: top;
-  width: 70%;
+  width: 60%;
 }

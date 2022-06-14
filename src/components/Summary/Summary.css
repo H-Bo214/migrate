@@ -8,15 +8,68 @@
   mix-blend-mode: normal;
   line-height: 24px;
   font-weight: 400;
-  padding-top: 1rem;
+  padding-top: 1.7rem;
 }
 
 .summary-container::before {
+  content: url(../../assets/images/down-arrow2.png);
+  position: absolute;
+  height: auto;
+  left: 45%;
+  bottom: 11.5rem;
+}
+
+.summary::before {
   content: "";
   position: absolute;
   height: 1px;
   background: rgba(110, 111, 112, 0.25);
-  width: 85%;
+  width: 87%;
   left: 50%;
+  bottom: 11rem;
   transform: translateX(-50%);
+}
+
+@media only screen and (width: 320px) {
+  .summary::before {
+    bottom: -6rem;
+  }
+  
+  .summary-container::before {
+    bottom: -6.5rem;
+  }
+
+}
+
+@media only screen and (width: 375px) {
+  .summary::before {
+    bottom: 9rem;
+  }
+  
+  .summary-container::before {
+    bottom: 9.5rem;
+  }
+
+}
+
+@media only screen and (width: 375px) and (height: 667px) {
+  .summary::before {
+    bottom: 0rem;
+  }
+  
+  .summary-container::before {
+    bottom: 0.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 411px) {
+  .summary::before {
+    bottom: 4rem;
+  }
+  
+  .summary-container::before {
+    bottom: 4.5rem;
+  }
+
 }

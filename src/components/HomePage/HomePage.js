@@ -7,7 +7,6 @@ import { fetchData, fetchBatchData } from "../../apiCalls"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import "./HomePage.css"
-
 import { spinnerStyle } from "../../styles.js"
 import {
   generateRandomCities,
@@ -66,8 +65,7 @@ const HomePage = () => {
   }
 
   const handleSearch = async (e) => {
-    const teleportRootEndpoint =
-      "https://api.teleport.org/api/urban_areas/slug:"
+    const teleportRootEndpoint = "https://api.teleport.org/api/urban_areas/slug:"
     e.preventDefault()
     if (selectedCity === null) {
       setSearchError(true)
