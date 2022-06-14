@@ -11,6 +11,8 @@ body {
   align-items: center;
   margin: 0 auto;
   min-width: 20rem;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
 input {

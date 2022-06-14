@@ -1,4 +1,11 @@
 .main-content {
   width: 90vw;
-  max-width: 31rem;
+  max-width: 26rem;
+}
+
+@media only screen and (width: 320px) {
+  .main-content {
+    width: 100%;
+  }
+  
 }
