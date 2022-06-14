@@ -17,7 +17,6 @@ const CitySelectionForm = ({
     <form
       className="select-search-container"
       role="search"
-      id="city-search"
       onKeyDown={handleKeyDown}
     >
       <button className="search-button" type="submit">
@@ -36,11 +35,11 @@ const CitySelectionForm = ({
         className="select-menu"
         placeholder="Search or select a city"
         autoFocus
-        blurInputOnSelect={false}
+        blurInputOnSelect
         styles={searchError ? customStyles2 : customStyles}
         theme={customTheme}
         classNamePrefix="select"
-        closeMenuOnSelect={true}
+        closeMenuOnSelect
       />
     </form>
   )
