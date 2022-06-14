@@ -20,8 +20,8 @@ cursor: pointer;
   border: none;
   background-color: #fff;
   padding: 0;
-  width: 23px;
-  height: 23px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .select-menu::placeholder {

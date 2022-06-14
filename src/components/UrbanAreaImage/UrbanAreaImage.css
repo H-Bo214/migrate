@@ -6,7 +6,7 @@
 .urban-area-img-container {
   position: relative;
   margin: 0 auto;
-  height: 22rem;
+  height: 16rem;
 }
 
 .urban-area-figure {
@@ -16,7 +16,7 @@
 .urban-area-img {
   width: 100%;
   object-fit: cover;
-  height: 22rem;
+  height: 16rem;
   background: #C4C4C4;
   mix-blend-mode: multiply; 
 }
@@ -27,10 +27,11 @@
   border: none;
   margin-left: 0.7rem;
   cursor: pointer;
-  transform: translateY(-21rem);
+  transform: translateY(-15rem);
   padding: 0;
 }
 
 .back-button-image {
   vertical-align: top;
+  width: 70%;
 }

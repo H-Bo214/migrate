@@ -22,14 +22,3 @@
   overflow: scroll;
   overflow-x: hidden;
 }
-
-.all-categories-container::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  background: rgba(110, 111, 112, 0.25);
-  bottom: -31.3rem;
-  width: 85%;
-  left: 50%;
-  transform: translateX(-50%);
-}

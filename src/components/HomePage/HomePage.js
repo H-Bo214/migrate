@@ -6,6 +6,8 @@ import PulseLoader from "react-spinners/PulseLoader"
 import { fetchData, fetchBatchData } from "../../apiCalls"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import "./HomePage.css"
+
 import { spinnerStyle } from "../../styles.js"
 import {
   generateRandomCities,
