@@ -28,8 +28,8 @@ const Category = ({ categoryScore, categoryName, icon }) => {
           <img 
             src={icon} 
             alt={`${categoryName} icon`} 
-            width="25" 
-            height="25"
+            width="22" 
+            height="22"
           />
         </div>
         <p className="category-name">{categoryName}</p>
