@@ -15,6 +15,8 @@ const UrbanAreaImage = ({ cityName, img }) => {
             src={backBlue}
             alt="back button icon"
             className="back-button-image"
+            width="22"
+            height="39"
           />
         </button>
       </Link>

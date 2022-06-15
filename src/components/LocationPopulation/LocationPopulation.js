@@ -14,13 +14,20 @@ const LocationPopulation = ({ latitude, longitude, population }) => {
         <img
           alt="Blue pin-drop icon. Opens google maps to the city coordinates specified."
           src={pinDrop}
+          width="15"
+          height="20"
         />
         <h2 className="demographic-heading">Location</h2>
         <p className="latitude">{latitude},</p>
         <p className="longitude">{longitude}</p>
       </a>
       <div className="population-container">
-        <img alt="Blue crowd of people icon." src={people} />
+        <img 
+          alt="Blue crowd of people icon." 
+          src={people} 
+          width="35"
+          height="20"
+        />
         <h2 className="demographic-heading">Population</h2>
         <p className="population">{population}</p>
       </div>

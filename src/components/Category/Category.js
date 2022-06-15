@@ -25,7 +25,12 @@ const Category = ({ categoryScore, categoryName, icon }) => {
     <div className="category-container">
       <section className="category">
         <div>
-          <img src={icon} alt={`${categoryName} icon`} />
+          <img 
+            src={icon} 
+            alt={`${categoryName} icon`} 
+            width="22" 
+            height="22"
+          />
         </div>
         <p className="category-name">{categoryName}</p>
       </section>

@@ -8,6 +8,8 @@ const Header = () => {
         <img
           alt="Blue gradient circle with a geometric bird in the center."
           src={logo}
+          width="117"
+          height="117"
         />
       </div>
       <h1 className="question">Where do you want to live?</h1>

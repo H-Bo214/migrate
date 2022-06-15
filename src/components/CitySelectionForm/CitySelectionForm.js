@@ -25,6 +25,8 @@ const CitySelectionForm = ({
           src={magnifyingGlass}
           onClick={handleSearch}
           className="search-icon"
+          width="25"
+          height="25"
         />
       </button>
       <Select
