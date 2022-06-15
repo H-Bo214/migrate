@@ -10,7 +10,13 @@ const CityRating = ({ cityName, rating }) => {
         <h1 className="city">{cityName}</h1>
       </div>
       <div className="rating-container">
-        <img src={star} alt="Blue star icon." className="star-icon" />
+        <img 
+          src={star} 
+          alt="Blue star icon." 
+          className="star-icon" 
+          width="16" 
+          height="16"
+        />
         <p className="overall-score">
           <span className="overall-rating">{overallRating}</span> / 100
         </p>
