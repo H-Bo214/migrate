@@ -96,7 +96,7 @@ I began planning out this project by reviewing the API documentation provided by
 <br/>
 
 
-<div>
+<div align="center">
   
   <h2>Migrate comp</h2>
   <img src="./migrate-comp.png" alt="Migrate comp">
