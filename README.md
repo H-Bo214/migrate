@@ -94,7 +94,6 @@ I began planning out this project by reviewing the API documentation provided by
 <br/>
 <br />
 
-
 ## 🔧Mock up and planning tools
 <br/>
 
@@ -112,7 +111,6 @@ I began planning out this project by reviewing the API documentation provided by
   <img src="./cypress-e2e-ss.png" alt="cypress passing test results">
   <h2>Lighthouse scores</h2>
   <img src="./migrate-lighthouse-ss.png" alt="Migrate comp">
-
 
 </div>
 
