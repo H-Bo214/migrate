@@ -29,11 +29,14 @@
 <hr />
 <br />
 
+<div>
+  
 <figure>
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
   <figcaption>Open location in google maps</figcaption>
 </figure>
 
+</div>
 <!-- You may write notes in your readme this way if you want to, it looks good and also different from other text -->
 <br/>
 
