@@ -122,5 +122,8 @@ I began planning out this project by reviewing the API documentation provided by
 - [Favicon](https://favicon.io/)
 - [Emotion/React](https://emotion.sh/docs/@emotion/react)
 - [Flaticon - Saepul Nahwan](https://www.flaticon.com/authors/saepul-nahwan)
-- [City Images](https://developers.teleport.org/api/getting_started/) All images belong to the original photographer and are used under creative commons. Attribution information can be located by searching https://api.teleport.org/api/urban_areas/slug: **city name here all lower case, with hyphen if city has 2 names ex. san-antonio** /images/
+- [City Images](https://developers.teleport.org/api/getting_started/) All images belong to the original photographer and are used under creative commons. Attribution information can be located by searching:
+https://api.teleport.org/api/urban_areas/slug:
+**city name here all lower case, with hyphen if city has 2 names ex. san-antonio**
+/images/
 
