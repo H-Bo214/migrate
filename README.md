@@ -29,6 +29,11 @@
 <hr />
 <br />
 
+<figure>
+    <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
+    <figcaption>Open location in google maps</figcaption>
+</figure>
+
 <div>
 
 <!-- Add your project demo gif here -->
@@ -98,7 +103,6 @@ I began planning out this project by reviewing the API documentation provided by
 
 ## 🔧Mock up and planning tools
 <br/>
-
 
 <div align="center">
   
