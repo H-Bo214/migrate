@@ -30,13 +30,21 @@
 <br />
 
 <div>
-  
-<figure>
+
+<!-- Add your project demo gif here -->
+  <p align="right">Open location in google maps</p>
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
-  <figcaption>Open location in google maps</figcaption>
-</figure>
+  <p>Search by city name</p>
+  <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
+  <br/>
+  <hr />
+  <h4 align="right">Select from a randomized list</h4>
+  <img align="right" src="./migrate-sr-gif-1.gif" alt="migrate application gif" height="720"/>
+  <h4>Search via dropdown menu</h4>
+  <img src="./migrate-sr-gif-4.gif" alt="migrate application gif" height="720"/>
 
 </div>
+
 <!-- You may write notes in your readme this way if you want to, it looks good and also different from other text -->
 <br/>
 
