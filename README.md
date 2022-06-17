@@ -33,7 +33,7 @@
 
 <!-- Add your project demo gif here -->
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
-<div>
+<div align="center">
   <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
   <figcaption align="center">Search by city name</figcaption>
 </div>  
