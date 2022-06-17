@@ -90,6 +90,8 @@ A few years ago, my wife, dog and I moved from our home state to Colorado. Just 
 I began planning out this project by reviewing the API documentation provided by Teleport, which led me to brainstorm features. From there, I planned on how to best get the information I needed. The Teleport API has a massive amount of data. Some challenges I faced involved retrieving data embedded deep in a structure that wasn't in a friendly, usable format. I overcame some learning curves as I built this project with several tools I hadn't used before, including React-Select, Emotion/React and Cypress. I also spent time researching React 18 and React Router v6's release changes. Throughout the project, I reviewed and refactored several parts of my code. I often reviewed my prior day's work to determine if I could DRY up the code or implement a better approach to the problem. Overall, I'm satisfied with the outcome and hope to add a desktop friendly version that can take advantage of the wealth of information provided by the Teleport API.
 <br/>
 
+
+
 ## 🔧Mock up and planning tools
 <br/>
 
