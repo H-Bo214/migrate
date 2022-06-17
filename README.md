@@ -33,9 +33,9 @@
 
 <!-- Add your project demo gif here -->
   <img src="./migrate-sr-gif-1.gif" alt="migrate application gif" height="720"/>
-  <img src="./migrate-sr-gif-2" alt="migrate application gif" height="720"/>
-  <img src="./migrate-sr-gif-3" alt="migrate application gif" height="720"/>
-  <img src="./migrate-sr-gif-4" alt="migrate application gif" height="720"/>
+  <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
+  <img src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
+  <img src="./migrate-sr-gif-4.gif" alt="migrate application gif" height="720"/>
 
 </div>
 
