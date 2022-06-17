@@ -62,9 +62,7 @@ A few years ago, my wife, dog and I moved from our home state to Colorado. Just 
 - Scores for 17 categories, including housing, safety, healthcare and more
 - Location coordinates that link to google maps
 - Mobile friendly design
-
 <br/>
-
 ## ⛏️Built with
 
 - JavaScript
