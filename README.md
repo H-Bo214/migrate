@@ -32,11 +32,11 @@
 <div>
 
 <!-- Add your project demo gif here -->
-  <img align="right" src="./migrate-sr-gif-1.gif" alt="migrate application gif" height="720"/>
+  <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
   <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
   <br/>
   <hr />
-  <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
+  <img align="right" src="./migrate-sr-gif-1.gif" alt="migrate application gif" height="720"/>
   <img src="./migrate-sr-gif-4.gif" alt="migrate application gif" height="720"/>
 
 </div>
@@ -63,6 +63,7 @@ A few years ago, my wife, dog and I moved from our home state to Colorado. Just 
 - Location coordinates that link to google maps
 - Mobile friendly design
 <br/>
+
 ## ⛏️Built with
 
 - JavaScript
