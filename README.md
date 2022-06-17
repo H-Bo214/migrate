@@ -29,7 +29,7 @@
 <hr />
 <br />
 
-<div>
+<div align="center">
 
 <!-- Add your project demo gif here -->
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
