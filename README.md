@@ -33,7 +33,7 @@
 
 <!-- Add your project demo gif here -->
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
-  <h4 align="right">Open location in google maps</h4>
+  <h4>Open location in google maps</h4>
   <img src="./migrate-sr-gif-2.gif" alt="migrate application gif 2" height="720"/>
   <h4>Search by city name</h4>
   <br/>
