@@ -32,10 +32,14 @@
 <div>
 
 <!-- Add your project demo gif here -->
-  <p align="right">Open location in google maps</p>
-  <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
-  <p>Search by city name</p>
-  <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
+  <div>
+     <p align="right">Open location in google maps</p>
+     <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
+  </div>
+  <div>
+    <p>Search by city name</p>
+    <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
+  </div>
   <br/>
   <hr />
   <h4 align="right">Select from a randomized list</h4>
