@@ -5,7 +5,7 @@
   <h1 align="center">Migrate</h1>
   <p align="center">
     <!-- Add your tagline or very short intro of your project -->
-    Get demographic and quality of life information for major urban areas within North America.
+    Helping those looking to migrate to a new home 
   <br />
   <a href="https://migrate-na.netlify.app/">Migrate</a> 
   </p>
@@ -20,8 +20,8 @@
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/) 
-[![Status](https://img.shields.io/badge/React%20Router%20v6%20-grey?style=flat-square&logo=reactrouter)](https://reactrouterdotcom.fly.dev/docs/en/v6) [![Status](https://img.shields.io/badge/React%20Testing%20Library%20-grey?style=flat-square&logo=testinglibrary)](https://testing-library.com/docs/react-testing-library/intro/) [![Status](https://img.shields.io/badge/Cypress%20-grey?style=flat-square&logo=cypress)](https://docs.cypress.io/guides/overview/why-cypress) 
+[![Status](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
+[![Status](https://img.shields.io/badge/React%20Router%20v6%20-grey?style=flat-square&logo=reactrouter)](https://reactrouterdotcom.fly.dev/docs/en/v6) [![Status](https://img.shields.io/badge/React%20Testing%20Library%20-grey?style=flat-square&logo=testinglibrary)](https://testing-library.com/docs/react-testing-library/intro/) [![Status](https://img.shields.io/badge/Cypress%20-grey?style=flat-square&logo=cypress)](https://docs.cypress.io/guides/overview/why-cypress)
 [![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/Jest%20-grey?style=flat-square&logo=jest&logoColor=C21325)](https://jestjs.io/docs/getting-started) [![Status](https://img.shields.io/badge/Emotion%20-grey?style=flat-square)](https://emotion.sh/docs/introduction) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
 
 </div>
@@ -49,16 +49,14 @@
 
 ## 🧐About
 
-Several years ago we moved away from my home state and relocated to Colorado. A couple of years after that I moved to Washington state. The weather, work and access to outdoor activities were the main motivators for the change. During this time I also looked into quality of life and statistical information. This inspired me to make Migrate. Migrate allows you access to demographic and quality of life information for 80+ urban areas within North America.  Categories are scored from 1 - 10 and include Housing, Cost of Living, Healthcare in addition to several others. Read about the urban area highlights, see a image and get an overall score. 
+A few years ago, my wife, dog and I moved from our home state to Colorado. Just couple years after that, we relocated to Washington. This series of moves made me realize what's most important to me when finding a new place live. My main motivators for change were based around the area's job opportunities, weather, and access to outdoor activities. I also assessed the overall quality of life, along with statistical information. All of this research inspired me to make Migrate. Migrate delivers accessible demographic and quality of life information for over 80 urban areas in North America. It provides a bird’s-eye view of urban areas through imagery, highlights, several rated categories and an overall score.
 
 ## 💡Features
 
-1. Search by major metropolitan area, select from a list or choose a randomly selected city
-2. Review the scores for 17 categories including Housing, Safety, Healthcare etc. 
-3. Location coordinates link to google maps
-4. Excellent Lighthouse scores for accessibility, best practices and SEO
-5. Mobile friendly design
-6. Unit testing, Integration testing, End to End testing
+- Search by major metropolitan area, select from a list or choose from randomized suggestions
+- Scores for 17 categories, including housing, safety, healthcare and more
+- Location coordinates that link to google maps
+- Mobile friendly design
 
 ## ⛏️Built with
 
@@ -70,7 +68,7 @@ Several years ago we moved away from my home state and relocated to Colorado. A 
 - Git VCS
 - GitHub Projects
 - React Testing Library
-- Cypress 
+- Cypress
 - React-Select
 - React-Spinners
 - Emotion/React
@@ -78,22 +76,28 @@ Several years ago we moved away from my home state and relocated to Colorado. A 
 
 ## 🏁Getting Started
 
-<a href="https://migrate-na.netlify.app/">See it in action</a> 
+<a href="https://migrate-na.netlify.app/">See it in action</a>
 
 ## 🗓Planning, challenges and future improvements
 
-I began planning by reviewing the API documentation provided by Teleport. After brainstorming features, I planned on how to best get the necessary information. The Teleport API has a massive amount of data. All of the information I required access to was sometimes embedded deep within the data structure. Some of the data housed in the Teleport API wasn't always in a friendly usable format. I found it challenging to work with at times. Additionally, I built this project with several tools I've never used before including React-Select, Emotion/React and Cypress. I also had to research some changes due to the release of React 18 and React Router v6. Throughout the project I reviewed and refactored several parts of my code. I would often review what I had done the day prior to determine if I could DRY up the code or implement a better approach to the problem. Overall I'm satisfied with the outcome and hope to add a desktop friendly version that can take advantage of the wealth of information provided by the Teleport API. 
-
+I began planning out this project by reviewing the API documentation provided by Teleport, which led me to brainstorm features. From there, I planned on how to best get the information I needed. The Teleport API has a massive amount of data. Some challenges I faced involved retrieving data embedded deep in a structure that wasn't in a friendly, usable format. I overcame some learning curves as I built this project with several tools I hadn't used before, including React-Select, Emotion/React and Cypress. I also spent time researching React 18 and React Router v6's release changes. Throughout the project, I reviewed and refactored several parts of my code. I often reviewed my prior day's work to determine if I could DRY up the code or implement a better approach to the problem. Overall, I'm satisfied with the outcome and hope to add a desktop friendly version that can take advantage of the wealth of information provided by the Teleport API.
 
 ## 🔧Mock up and planning tools
+
 <div>
 
-  <img src="./migrate-lighthouse-ss.png" alt="Migrate comp">
   <img src="./migrate-comp.png" alt="Migrate comp">
+  <h2>Migrate comp</h2>
   <img src="./html-structure.png" alt="HTML structure">
+  <h2>HTML structure</h2>
   <img src="./user-flow.png" alt="User flow structure">
+  <h2>User flow</h2>
   <img src="./component-structure.png" alt="component structure">
+  <h2>React component structure</h2>
   <img src="./cypress-e2e-ss.png" alt="cypress passing test results">
+  <h2>Cypress testing results</h2>
+  <img src="./migrate-lighthouse-ss.png" alt="Migrate comp">
+  <h2>Lighthouse scores</h2>
 
 </div>
 
@@ -106,4 +110,4 @@ I began planning by reviewing the API documentation provided by Teleport. After 
 - [Emotion/React](https://emotion.sh/docs/@emotion/react)
 - [City Images](https://developers.teleport.org/api/getting_started/) All images belong to the original photographer and are used under creative commons. Attribution information can be located by searching https://api.teleport.org/api/urban_areas/slug: **city name here all lower case, with hyphen if city has 2 names ex. san-antonio** /images/
 - ]
-- [Flaticon - Saepul Nahwan](https://www.flaticon.com/authors/saepul-nahwan) 
+- [Flaticon - Saepul Nahwan](https://www.flaticon.com/authors/saepul-nahwan)
