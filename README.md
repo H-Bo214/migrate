@@ -47,7 +47,7 @@
 
 <hr />
 
-<p align="center">Migrate provides demographic and quality of life information for major urban areas within North America. </p>
+<h3 align="center">Migrate provides demographic and quality of life information for major urban areas within North America. </h3>
 <br/>
 
 ## 🧐About
