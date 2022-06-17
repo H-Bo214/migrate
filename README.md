@@ -42,6 +42,7 @@
 
 <!-- You may write notes in your readme this way if you want to, it looks good and also different from other text -->
 <br/>
+
 > _**NOTE:** Mobile demos. Desktop version in progress._
 
 <hr />
