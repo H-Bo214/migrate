@@ -87,19 +87,20 @@ I began planning out this project by reviewing the API documentation provided by
 
 
 <div>
-
-  <img src="./migrate-comp.png" alt="Migrate comp">
+  
   <h2 align="center">Migrate comp</h2>
-  <img src="./html-structure.png" alt="HTML structure">
+  <img src="./migrate-comp.png" alt="Migrate comp">
   <h2>HTML structure</h2>
-  <img src="./user-flow.png" alt="User flow structure">
+  <img src="./html-structure.png" alt="HTML structure">
   <h2>User flow</h2>
-  <img src="./component-structure.png" alt="component structure">
+  <img src="./user-flow.png" alt="User flow structure">
   <h2>React component structure</h2>
-  <img src="./cypress-e2e-ss.png" alt="cypress passing test results">
+  <img src="./component-structure.png" alt="component structure">
   <h2>Cypress testing results</h2>
-  <img src="./migrate-lighthouse-ss.png" alt="Migrate comp">
+  <img src="./cypress-e2e-ss.png" alt="cypress passing test results">
   <h2>Lighthouse scores</h2>
+  <img src="./migrate-lighthouse-ss.png" alt="Migrate comp">
+
 
 </div>
 
