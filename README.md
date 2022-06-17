@@ -124,9 +124,6 @@ I began planning out this project by reviewing the API documentation provided by
 - [Flaticon - Saepul Nahwan](https://www.flaticon.com/authors/saepul-nahwan)
 - [City Images](https://developers.teleport.org/api/getting_started/) 
 - All images belong to the original photographer and are used under creative commons. Attribution information can be located by searching:
-https://api.teleport.org/api/urban_areas/slug:
-<br/>
-**city name here all lower case, with hyphen if city has 2 names ex. san-antonio**
-<br/>
-/images/
-
+https://api.teleport.org/api/urban_areas/slug: **city name** /images/
+here all lower case, with hyphen if city has 2 names ex. san-antonio
+> _**NOTE:** city names must be lower case. With hyphen if city has 2 names ex. san-antonio_
