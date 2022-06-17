@@ -35,6 +35,7 @@
   <img align="right" src="./migrate-sr-gif-1.gif" alt="migrate application gif" height="720"/>
   <img src="./migrate-sr-gif-2.gif" alt="migrate application gif" height="720"/>
   <br/>
+  <hr />
   <img align="right" src="./migrate-sr-gif-3.gif" alt="migrate application gif" height="720"/>
   <img src="./migrate-sr-gif-4.gif" alt="migrate application gif" height="720"/>
 
@@ -49,6 +50,7 @@
 
 <h3 align="center">Migrate provides demographic and quality of life information for major urban areas within North America. </h3>
 <br/>
+
 ## 🧐About
 
 A few years ago, my wife, dog and I moved from our home state to Colorado. Just couple years after that, we relocated to Washington. This series of moves made me realize what's most important to me when finding a new place live. My main motivators for change were based around the area's job opportunities, weather, and access to outdoor activities. I also assessed the overall quality of life, along with statistical information. All of this research inspired me to make Migrate. Migrate delivers accessible demographic and quality of life information for over 80 urban areas in North America. It provides a bird’s-eye view of urban areas through imagery, highlights, several rated categories and an overall score.
