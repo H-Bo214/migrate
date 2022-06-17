@@ -47,10 +47,12 @@
 
 <p align="center">Migrate provides demographic and quality of life information for major urban areas within North America. </p>
 <br/>
+
 ## 🧐About
 
 A few years ago, my wife, dog and I moved from our home state to Colorado. Just couple years after that, we relocated to Washington. This series of moves made me realize what's most important to me when finding a new place live. My main motivators for change were based around the area's job opportunities, weather, and access to outdoor activities. I also assessed the overall quality of life, along with statistical information. All of this research inspired me to make Migrate. Migrate delivers accessible demographic and quality of life information for over 80 urban areas in North America. It provides a bird’s-eye view of urban areas through imagery, highlights, several rated categories and an overall score.
 <br/>
+
 ## 💡Features
 
 - Search by major metropolitan area, select from a list or choose from randomized suggestions
@@ -58,6 +60,7 @@ A few years ago, my wife, dog and I moved from our home state to Colorado. Just 
 - Location coordinates that link to google maps
 - Mobile friendly design
 <br/>
+
 ## ⛏️Built with
 
 - JavaScript
@@ -78,10 +81,12 @@ A few years ago, my wife, dog and I moved from our home state to Colorado. Just 
 
 <a href="https://migrate-na.netlify.app/">See it in action</a>
 <br/>
+
 ## 🗓Planning, challenges and future improvements
 
 I began planning out this project by reviewing the API documentation provided by Teleport, which led me to brainstorm features. From there, I planned on how to best get the information I needed. The Teleport API has a massive amount of data. Some challenges I faced involved retrieving data embedded deep in a structure that wasn't in a friendly, usable format. I overcame some learning curves as I built this project with several tools I hadn't used before, including React-Select, Emotion/React and Cypress. I also spent time researching React 18 and React Router v6's release changes. Throughout the project, I reviewed and refactored several parts of my code. I often reviewed my prior day's work to determine if I could DRY up the code or implement a better approach to the problem. Overall, I'm satisfied with the outcome and hope to add a desktop friendly version that can take advantage of the wealth of information provided by the Teleport API.
 <br/>
+
 ## 🔧Mock up and planning tools
 <br/>
 
