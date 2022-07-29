@@ -23,6 +23,8 @@
 [![Status](https://img.shields.io/badge/JavaScript%20-grey?style=flat-square&logo=javascript)]() [![Status](https://img.shields.io/badge/HTML%20-grey?style=flat-square&logo=html5)]() [![Status](https://img.shields.io/badge/CSS%20-grey?style=flat-square&logo=css3&logoColor=1572B6)]() [![Status](https://img.shields.io/badge/React%20-grey?style=flat-square&logo=react)](https://reactjs.org/)
 [![Status](https://img.shields.io/badge/React%20Router%20v6%20-grey?style=flat-square&logo=reactrouter)](https://reactrouterdotcom.fly.dev/docs/en/v6) [![Status](https://img.shields.io/badge/React%20Testing%20Library%20-grey?style=flat-square&logo=testinglibrary)](https://testing-library.com/docs/react-testing-library/intro/) [![Status](https://img.shields.io/badge/Cypress%20-grey?style=flat-square&logo=cypress)](https://docs.cypress.io/guides/overview/why-cypress)
 [![Status](https://img.shields.io/badge/Figma%20-grey?style=flat-square&logo=figma)](https://www.figma.com/) [![Status](https://img.shields.io/badge/Jest%20-grey?style=flat-square&logo=jest&logoColor=C21325)](https://jestjs.io/docs/getting-started) [![Status](https://img.shields.io/badge/Emotion%20-grey?style=flat-square)](https://emotion.sh/docs/introduction) [![Status](https://img.shields.io/badge/React%20Select-grey?style=flat-square)](https://react-select.com/home) [![Status](https://img.shields.io/badge/React%20Spinners-grey?style=flat-square)](https://www.npmjs.com/package/react-spinners)
+  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/35b2ec1a-4480-4bee-b374-ecd75e14aa0a/deploy-status)](https://app.netlify.com/sites/migrate-na/deploys?branch=main)
 
 </div>
 
